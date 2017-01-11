@@ -155,6 +155,7 @@ public class Learn_word extends AppCompatActivity implements TextToSpeech.OnInit
         Struct(String name) {
             iName = name;
         }
+
     }
 
     private Learn_word.Struct[] buildData(int length) {
