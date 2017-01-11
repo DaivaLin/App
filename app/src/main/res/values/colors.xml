@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="holo_gray_light">#33999999</color>
+    <color name="half_black">#f6f6f9</color>//"+"的顏色
+    <color name="star_button_color">#08837d</color>//"+"的底色
+    <color name="other_button_color">#fdfefd</color>//其他按鈕底色
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="white">#ffffff</color>//字的顏色
+    <color name="black">#FF000000</color>
+    <color name="black_20">#33000000</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>
