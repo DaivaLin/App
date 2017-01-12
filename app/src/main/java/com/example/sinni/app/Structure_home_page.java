@@ -11,10 +11,7 @@ public class Structure_home_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_structure_home_page);
-
-
         findView();
-
     }
     public void findView() {
         Single_structure = (ImageView) findViewById(R.id.Single_structure);

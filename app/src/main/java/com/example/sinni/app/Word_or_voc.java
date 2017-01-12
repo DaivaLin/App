@@ -17,8 +17,6 @@ public class Word_or_voc extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_or_voc);
         setTitle("Choose");
-
-        intent = new Intent();
         bundle = this.getIntent().getExtras();
         Situation = bundle.getString("Situation");
         bundle = new Bundle();
@@ -32,6 +30,7 @@ public class Word_or_voc extends AppCompatActivity {
                // Toast.makeText(getApplicationContext(), "你選擇" +Situation, Toast.LENGTH_SHORT).show();
                 intent.putExtras(bundle);
                 startActivity(intent);
+                finish();
             }
         });
 

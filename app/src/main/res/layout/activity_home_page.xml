@@ -12,191 +12,44 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.sinni.app.Home_page">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/shopping"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/icon_shopping" />
-
     <TextView
-        android:text="@string/shopping"
+        android:text="漢字結構"
         android:layout_width="100dp"
         android:layout_height="30dp"
         android:id="@+id/textView2"
-        android:layout_below="@+id/shopping"
-        android:layout_alignLeft="@+id/shopping"
-        android:layout_alignStart="@+id/shopping"
-        android:textAlignment="center" />
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/icon_travel"
-        android:id="@+id/travel"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/icon_entertainment"
-        android:id="@+id/entertainment"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:text="@string/travel"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/travel"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textView16"
-        android:textAlignment="center" />
-
-    <TextView
-        android:text="@string/entertainment"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:id="@+id/textView15"
         android:textAlignment="center"
-        android:layout_below="@+id/entertainment"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/textView15"
-        android:layout_alignLeft="@+id/textView15"
-        android:layout_alignStart="@+id/textView15"
-        android:id="@+id/greeting"
-        android:adjustViewBounds="false"
-        android:cropToPadding="false"
-        app:srcCompat="@drawable/icon_greetings" />
-
-    <TextView
-        android:text="@string/edu"
-        android:layout_width="100dp"
-        android:id="@+id/textView18"
-        android:layout_height="30dp"
-        android:textAlignment="center"
-        android:layout_below="@+id/work"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/icon_edu"
-        android:id="@+id/edu"
-        android:layout_above="@+id/textView14"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="@string/work"
-        android:layout_width="100dp"
-        android:id="@+id/textView19"
-        android:layout_height="30dp"
-        android:textAlignment="center"
-        android:layout_below="@+id/work"
-        android:layout_alignLeft="@+id/work"
-        android:layout_alignStart="@+id/work" />
-
-    <TextView
-        android:text="@string/greeting"
-        android:layout_width="100dp"
-        android:id="@+id/textView14"
-        android:layout_height="30dp"
-        android:textAlignment="center"
-        android:layout_below="@+id/greeting"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/icon_work"
-        android:id="@+id/work"
-        android:layout_below="@+id/textView16"
-        android:layout_alignLeft="@+id/textView16"
-        android:layout_alignStart="@+id/textView16" />
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/food"
-        app:srcCompat="@drawable/icon_meal"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/icon_traffic"
-        android:id="@+id/car"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:text="@string/food"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:id="@+id/textView3"
-        android:textAlignment="center"
-        android:layout_below="@+id/food"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="@string/health"
-        android:layout_width="100dp"
-        android:id="@+id/textView17"
-        android:layout_height="30dp"
-        android:textAlignment="center"
-        android:layout_above="@+id/edu"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:srcCompat="@drawable/icon_health"
-        android:id="@+id/health"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/a"
+        android:layout_marginBottom="26dp"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
 
     <TextView
-        android:text="@string/car"
+        android:text="情境教學"
         android:layout_width="100dp"
         android:id="@+id/textView"
         android:layout_height="30dp"
         android:textAlignment="center"
-        android:layout_below="@+id/car"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/b"
+        android:layout_alignLeft="@+id/b"
+        android:layout_alignStart="@+id/b" />
 
-    <com.getbase.floatingactionbutton.FloatingActionsMenu
-        android:id="@+id/multiple_actions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icon_menu"
-        fab:fab_addButtonColorNormal="@color/star_button_color"
-        fab:fab_addButtonColorPressed="@color/white_pressed"
-        fab:fab_addButtonPlusIconColor="@color/half_black"
-        fab:fab_labelStyle="@style/fab_button_style"
-        android:layout_alignWithParentIfMissing="false"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true">
-    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/icon_work"
+        android:id="@+id/b"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="23dp" />
 
 
 </RelativeLayout>

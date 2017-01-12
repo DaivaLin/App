@@ -10,7 +10,7 @@
     <string name="work">工作</string>
     <string name="health">健康</string>
     <string name="travel">旅行</string>
-    <string name="number_of_questions">題數</string>
+    <string name="numberOfQuestions">題數</string>
     <string name="right">答對</string>
     <string name="wrong">答錯</string>
     <string name="go_back">上一頁</string>
