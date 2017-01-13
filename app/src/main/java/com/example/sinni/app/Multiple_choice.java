@@ -91,19 +91,15 @@ public class Multiple_choice extends AppCompatActivity implements View.OnClickLi
         }
     }
 
-    public static String[] RandomArray(String[] mArray)
-    {
+    public static String[] RandomArray(String[] mArray){
         int mLength = mArray.length,mRandom ;
         String mNumber;
-
-        for(int i = 0; i < mLength; i++)
-        {
+        for(int i = 0; i < mLength; i++) {
             mRandom = (int)(Math.random() * mLength);
             mNumber = mArray[i];
             mArray[i] = mArray[mRandom];
             mArray[mRandom] = mNumber;
         }
-
         return mArray;
     }
 

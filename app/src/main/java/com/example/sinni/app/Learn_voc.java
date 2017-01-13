@@ -20,13 +20,13 @@ public class Learn_voc extends AppCompatActivity implements TextToSpeech.OnInitL
     TextView voc,spel,mean ;
     ImageView back,last,next,showGIF,sound;
     int w = 0;
-    String [] vocmean;
-    String [] vocabulary;
-    String [] spell;
-    int[] imgIds;
+    String [] vocmean=new String[]{null};
+    String [] vocabulary=new String[]{null};
+    String [] spell=new String[]{null};
+    int[] imgIds=new int[]{0};
     String Situation,Word_or_Voc,Learn_or_Test;
     // int[] easy_food_gif =  {R.drawable.bird,R.drawable.chicken,R.drawable.fish,R.drawable.water,R.drawable.cold,R.drawable.hot,R.drawable.coffee,R.drawable.tea,R.drawable.not_thing,R.drawable.what,R.drawable.not_thing,R.drawable.not_thing,R.drawable.tasty,R.drawable.not_thing,R.drawable.not_thing,R.drawable.not_thing,R.drawable.not_thing,R.drawable.milk,R.drawable.meat,R.drawable.egg,R.drawable.dish,R.drawable.dumpling,R.drawable.rice,R.drawable.noodles,R.drawable.soup,R.drawable.not_thing,R.drawable.cake,R.drawable.bread,R.drawable.fruits,R.drawable.apple,R.drawable.banana,R.drawable.food,R.drawable.drink,R.drawable.juice,R.drawable.wine,R.drawable.cup,R.drawable.cup,R.drawable.not_thing,R.drawable.eat,R.drawable.drinking,R.drawable.not_thing,R.drawable.not_thing,R.drawable.not_thing,R.drawable.sweet,R.drawable.menu,R.drawable.chocolate,R.drawable.not_thing,R.drawable.not_thing,R.drawable.bowl,R.drawable.plate,R.drawable.not_thing,R.drawable.bottle,R.drawable.not_thing,R.drawable.half,R.drawable.not_thing,R.drawable.good ,R.drawable.meal,R.drawable.seat,R.drawable.oil,R.drawable.not_thing,R.drawable.health,R.drawable.not_thing,R.drawable.i_am_done,R.drawable.steak,R.drawable.rice2,R.drawable.sandwich,R.drawable.watermelon,R.drawable.beer,R.drawable.black_tea,R.drawable.order,R.drawable.not_thing,R.drawable.not_thing,R.drawable.sour,R.drawable.not_thing,R.drawable.salty,R.drawable.spicy,R.drawable.dessert,R.drawable.ice_cream,R.drawable.cookie,R.drawable.hamburg,R.drawable.vegetables,R.drawable.salt,R.drawable.sugar,R.drawable.cook,R.drawable.not_thing,R.drawable.not_thing,R.drawable.not_thing,R.drawable.not_thing,R.drawable.not_thing,R.drawable.not_thing,R.drawable.not_thing,R.drawable.not_thing,R.drawable.not_thing,R.drawable.not_thing,R.drawable.not_thing,R.drawable.not_thing,R.drawable.grilled,R.drawable.not_thing,R.drawable.not_thing,R.drawable.knife,R.drawable.fork,R.drawable.spoon,R.drawable.chopsticks};
-
+    Bundle bundle;
     private TextToSpeech tts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +38,12 @@ public class Learn_voc extends AppCompatActivity implements TextToSpeech.OnInitL
         floatingButton();
         Resources res = getResources();
 
-        Bundle bundle = this.getIntent().getExtras();
-        Situation = bundle.getString("Situation");
-        Word_or_Voc = bundle.getString("Word_or_Voc");
-        Learn_or_Test = bundle.getString("Learn_or_Test");
-
+        if(this.getIntent().getExtras()!=null) {
+            bundle = this.getIntent().getExtras();
+            Situation = bundle.getString("Situation");
+            Word_or_Voc = bundle.getString("Word_or_Voc");
+            Learn_or_Test = bundle.getString("Learn_or_Test");
+        }
         switch (Situation){
             case "food":
                 vocmean = res.getStringArray (R.array.easy_food_arry);
@@ -178,7 +179,7 @@ public class Learn_voc extends AppCompatActivity implements TextToSpeech.OnInitL
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "選擇題", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Learn_voc.this, text_multiple.class);
+                Intent intent = new Intent(Learn_voc.this, TextMultiple.class);
                 intent.putExtra("Situation", Situation);
                 startActivity(intent);
             }

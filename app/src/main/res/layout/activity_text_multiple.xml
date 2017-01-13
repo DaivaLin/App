@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.sinni.app.text_multiple">
+    tools:context="com.example.sinni.app.TextMultiple">
 
     <TextView
         android:layout_width="match_parent"
@@ -20,11 +20,9 @@
         android:layout_above="@+id/button6"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_height="70dp"
-        android:text="你好" />
+        android:layout_height="70dp" />
 
     <TextView
-        android:text="10"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/time"

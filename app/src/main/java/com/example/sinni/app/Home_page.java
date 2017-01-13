@@ -11,7 +11,7 @@ import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
 
 public class Home_page extends AppCompatActivity {
-    ImageView food,shopping,car;
+    ImageView a,b;
     Bundle bundle;
     Intent intent;
 
@@ -21,47 +21,35 @@ public class Home_page extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
         setTitle("Home Page");
         findView();
-        //浮動button
-        floatingButton();
-        bundle = new Bundle();
+       // floatingButton();
+       // bundle = new Bundle();
         intent = new Intent();
 
-        food.setOnClickListener(new View.OnClickListener() {
+        a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(Home_page.this,Word_or_voc.class);
-                bundle.putString("Situation", "food");
-                intent.putExtras(bundle);
+                intent = new Intent(Home_page.this,StructureCognition.class);
+                //bundle.putString("Situation", "food");
+              //  intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
-        shopping.setOnClickListener(new View.OnClickListener() {
+        b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(Home_page.this, Word_or_voc.class);
-                bundle.putString("Situation", "shopping");
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
-        });
-        car.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                intent = new Intent(Home_page.this, Word_or_voc.class);
-                bundle.putString("Situation", "car");
-                intent.putExtras(bundle);
+                intent = new Intent(Home_page.this, SituationSelect.class);
+                //bundle.putString("Situation", "shopping");
+              //  intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
 
     }
     public void findView() {
-        food = (ImageView) findViewById(R.id.food);
-        shopping = (ImageView) findViewById(R.id.shopping);
-        car = (ImageView) findViewById(R.id.car);
+        a = (ImageView) findViewById(R.id.a);
+        b = (ImageView) findViewById(R.id.b);
 
     }
-
     //浮動button-function
     public void floatingButton(){
         com.getbase.floatingactionbutton.FloatingActionButton my_favorite = new FloatingActionButton(getBaseContext());

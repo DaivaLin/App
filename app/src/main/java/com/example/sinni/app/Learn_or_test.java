@@ -59,7 +59,7 @@ public class Learn_or_test extends AppCompatActivity {
                         intent = new Intent(Learn_or_test.this,Learn_word.class);
                         break;
                     case "Voc":
-                        intent = new Intent(Learn_or_test.this,text_multiple.class);
+                        intent = new Intent(Learn_or_test.this,TextMultiple.class);
                         break;
                 }
                 intent.putExtras(bundle);
