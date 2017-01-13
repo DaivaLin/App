@@ -16,7 +16,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Word_card" />
-        <activity android:name=".Structure_home_page" />
         <activity android:name=".Multiple_choice" />
         <activity android:name=".Multiple_choice_score" />
         <activity android:name=".Learn_voc" />
@@ -29,8 +28,10 @@
         <activity android:name=".StructureCognition" />
         <activity android:name=".StructureTeaching" />
         <activity android:name=".StructureExercise" />
-        <activity android:name=".End"></activity>
-        <activity android:name=".UpperAndLowerCombinations"></activity>
+        <activity android:name=".End" />
+        <activity android:name=".UpperAndLowerCombinations" />
+        <activity android:name=".Structures_level2" />
+        <activity android:name=".Structures_level3"></activity>
     </application>
 
 </manifest>

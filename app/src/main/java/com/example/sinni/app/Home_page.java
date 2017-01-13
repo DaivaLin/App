@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
-import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
 
 public class Home_page extends AppCompatActivity {
@@ -71,24 +70,24 @@ public class Home_page extends AppCompatActivity {
 //            }
 //        });
 
-        //浮動button-附近景點
-        Structure.setTitle("結構");
-        Structure.setColorNormalResId(R.color.other_button_color);
-        Structure.setColorDisabled(R.color.white_pressed);
-        Structure.setColorPressedResId(R.color.black_20);
-        Structure.setIcon(R.drawable.icon_connect);
-        Structure.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Toast.makeText(getApplicationContext(),"結構",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Home_page.this, Structure_home_page.class);
-                startActivity(intent);
-
-            }
-        });
-        final FloatingActionsMenu menuMultipleActions = (FloatingActionsMenu) findViewById(R.id.multiple_actions);
-       // menuMultipleActions.addButton(my_favorite);
-        menuMultipleActions.addButton(Structure);
+//        //浮動button-附近景點
+//        Structure.setTitle("結構");
+//        Structure.setColorNormalResId(R.color.other_button_color);
+//        Structure.setColorDisabled(R.color.white_pressed);
+//        Structure.setColorPressedResId(R.color.black_20);
+//        Structure.setIcon(R.drawable.icon_connect);
+//        Structure.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //Toast.makeText(getApplicationContext(),"結構",Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(Home_page.this, Structure_home_page.class);
+//                startActivity(intent);
+//
+//            }
+//        });
+//        final FloatingActionsMenu menuMultipleActions = (FloatingActionsMenu) findViewById(R.id.multiple_actions);
+//       // menuMultipleActions.addButton(my_favorite);
+//        menuMultipleActions.addButton(Structure);
     }
 
 }
