@@ -14,8 +14,10 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
+
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -40,6 +42,7 @@ public class Learn_word extends AppCompatActivity implements TextToSpeech.OnInit
     TextView spel;
     String[] mean;
     int w = 0;
+    Bundle bundle;
    // Learn_word.Struct[] mItems = buildData(part[w].length);;
     TextView t1;
     int[][] video = new int[][] {{R.raw.easyfoodvideo_sun,R.raw.easyfoodvideo_moon},{R.raw.easyfoodvideo_people,R.raw.easyfoodvideo_cow},{R.raw.easyfoodvideo_ice2,R.raw.easyfoodvideo_water}};
@@ -50,6 +53,12 @@ public class Learn_word extends AppCompatActivity implements TextToSpeech.OnInit
         setTitle("Word");
         //畫面出始化給與各國文字
         findView();
+
+        //浮動button
+        floatingButton();
+        bundle = getIntent().getExtras();
+        Situation = bundle.getString("Situation");
+
         mList = (ListView) findViewById(listView);
         tts = new TextToSpeech(this, this);
         mc = new MediaController(this);
@@ -79,7 +88,7 @@ public class Learn_word extends AppCompatActivity implements TextToSpeech.OnInit
             @Override
             public void onClick(View v) {
                 if(w<=0){
-                    Toast.makeText(Learn_word.this, "已是第一張" , Toast.LENGTH_SHORT).show();
+                //   Toast.makeText(Learn_word.this, "已是第一張" , Toast.LENGTH_SHORT).show();
                 }else{
                     w = w -1;
                     setvalue(w);
@@ -99,7 +108,7 @@ public class Learn_word extends AppCompatActivity implements TextToSpeech.OnInit
             @Override
             public void onClick(View v) {
                 if(w>=word.length-1){
-                    Toast.makeText(Learn_word.this, "已是最後一張" , Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(Learn_word.this, "已是最後一張" , Toast.LENGTH_SHORT).show();
                 }else{
                     w = w +1;
                     setvalue(w);
@@ -232,6 +241,35 @@ public class Learn_word extends AppCompatActivity implements TextToSpeech.OnInit
             tts.stop();
             tts.shutdown();
         }
+    }
+
+    //浮動button-function
+    public void floatingButton() {
+        String test = getString(R.string.test);
+        FloatingActionButton Multiple_choice = new FloatingActionButton(getBaseContext());
+        FloatingActionButton Learn_word = new FloatingActionButton(getBaseContext());
+
+        //浮動button-我的收藏
+        Multiple_choice.setTitle(test);
+        Multiple_choice.setColorNormalResId(R.color.other_button_color);
+        Multiple_choice.setColorDisabled(R.color.white_pressed);
+        Multiple_choice.setColorPressedResId(R.color.black_20);
+        Multiple_choice.setIcon(R.drawable.icon_check);
+        Multiple_choice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //  Toast.makeText(getApplicationContext(), "選擇題", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Learn_word.this, StructureExercise.class);
+                intent.putExtra("Situation", Situation);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        final FloatingActionsMenu menuMultipleActions = (FloatingActionsMenu) findViewById(R.id.multiple_actions);
+        menuMultipleActions.addButton(Multiple_choice);
+
     }
 }
 

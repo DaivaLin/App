@@ -165,11 +165,12 @@ public class Learn_voc extends AppCompatActivity implements TextToSpeech.OnInitL
 
     //浮動button-function
     public void floatingButton() {
+        String Multiplechoice = getString(R.string.Multiple_choice);
         FloatingActionButton Multiple_choice = new FloatingActionButton(getBaseContext());
         FloatingActionButton Learn_word = new FloatingActionButton(getBaseContext());
 
         //浮動button-我的收藏
-        Multiple_choice.setTitle("選擇題");
+        Multiple_choice.setTitle(Multiplechoice);
         Multiple_choice.setColorNormalResId(R.color.other_button_color);
         Multiple_choice.setColorDisabled(R.color.white_pressed);
         Multiple_choice.setColorPressedResId(R.color.black_20);
@@ -177,7 +178,7 @@ public class Learn_voc extends AppCompatActivity implements TextToSpeech.OnInitL
         Multiple_choice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "選擇題", Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(getApplicationContext(), "選擇題", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Learn_voc.this, TextMultiple.class);
                 intent.putExtra("Situation", Situation);
                 startActivity(intent);

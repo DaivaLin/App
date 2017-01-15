@@ -115,11 +115,11 @@ ImageView traditional;
                 a++;
                 //Resources resources = getResources();
                 traditional.setImageDrawable(ContextCompat.getDrawable(this, animationword1[count][1]));
-                showToastMessage("正確", time);
+            //   showToastMessage("正確", time);
             } else {
                 wrong++;
                 Again();
-                showToastMessage("錯誤", time);
+             //   showToastMessage("錯誤", time);
             }
         } else if (a == 1) {
             if (backgroundImageName.equals(String.valueOf(animationword2[count][1]))) {

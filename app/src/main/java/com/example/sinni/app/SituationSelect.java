@@ -26,12 +26,12 @@ public class SituationSelect extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent();
-                intent.setClass(SituationSelect.this,Learn_voc.class);
+                intent.setClass(SituationSelect.this,word_and_voc.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("Situation", "food");
                 intent.putExtras(bundle);
                 startActivity(intent);
-
+                finish();
             }
         });
         shopping.setOnClickListener(new View.OnClickListener() {

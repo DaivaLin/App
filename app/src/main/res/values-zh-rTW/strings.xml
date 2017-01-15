@@ -64,13 +64,15 @@
 
     <string name="structure_learning">結構教學</string>
     <string name="situational_learning">情境教學</string>
-    <string name="right">正確1</string>
-    <string name="wrong">錯誤1</string>
-    <string name="word">文字1</string>
-    <string name="voc">詞彙1</string>
-    <string name="level1">第一級1</string>
-    <string name="level2">第二級2</string>
-    <string name="level3">第三級3</string>
+    <string name="right">正確</string>
+    <string name="wrong">錯誤</string>
+    <string name="word">文字</string>
+    <string name="voc">詞彙</string>
+    <string name="level1">第一級</string>
+    <string name="level2">第二級</string>
+    <string name="level3">第三級</string>
+    <string name="Multiple_choice">選擇題</string>
+    <string name="test">快拚快答</string>
 
 
 </resources>
