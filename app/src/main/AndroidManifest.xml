@@ -28,8 +28,8 @@
         <activity android:name=".End" />
         <activity android:name=".UpperAndLowerCombinations" />
         <activity android:name=".Structures_level2" />
-        <activity android:name=".Structures_level3"/>
-
+        <activity android:name=".Structures_level3" />
+        <activity android:name=".choose_wordvoc"></activity>
     </application>
 
 </manifest>

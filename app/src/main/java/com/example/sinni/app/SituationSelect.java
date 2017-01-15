@@ -26,7 +26,7 @@ public class SituationSelect extends AppCompatActivity {
         food.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(SituationSelect.this,Word_or_voc.class);
+                intent = new Intent(SituationSelect.this,choose_wordvoc.class);
                 bundle.putString("Situation", "food");
                 intent.putExtras(bundle);
                 startActivity(intent);
