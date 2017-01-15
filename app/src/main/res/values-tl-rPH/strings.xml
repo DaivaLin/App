@@ -11,11 +11,21 @@
     <string name="health">Kalusugan</string>
     <string name="travel">Paglalakbay</string>
     <string name="number_of_questions">Tanong</string>
-    <string name="right">Karapatan</string>
-    <string name="wrong">Mali</string>
     <string name="go_back">Nakaraang pahina</string>
 
-    <string name="structure">Kaayusan</string>
+
+    <string name="structure_learning">Istraktura pagtuturo</string>
+    <string name="situational_learning">Situational pagtuturo</string>
+    <string name="right">Tama</string>
+    <string name="wrong">Mali</string>
+    <string name="word">Salita</string>
+    <string name="voc">Bokabularyo</string>
+    <string name="level1">Antas 1</string>
+    <string name="level2">Antas 2</string>
+    <string name="level3">Antas 3</string>
+    <string name="Multiple_choice">Maraming pagpipilian</string>
+    <string name="test">Pagsusulit</string>
+
     <string name="expalnt1">Hugis ng istraktura ay maaaring nahahati sa maraming mga uri ng mga character?</string>
     <string name="expalnt2">Sa pangkalahatan, ang hugis istraktura ng mga character na Tsino ay maaaring nahahati sa "single character" at "magkasya ang salitang" dalawang kategorya. Aling ay maaaring nahahati sa complex character "sa paligid istruktura," "ang vertical istraktura" at "istraktura na napapalibutan ng 'tatlo.</string>
     <string name="Single_structure">Tangi istraktura</string>

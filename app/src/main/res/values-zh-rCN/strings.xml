@@ -11,11 +11,21 @@
     <string name="health">健康</string>
     <string name="travel">旅行</string>
     <string name="number_of_questions">题数</string>
-    <string name="right">答对</string>
-    <string name="wrong">答错</string>
     <string name="go_back">上一页</string>
 
-    <string name="structure">结构</string>
+    <string name="structure_learning">结构教学</string>
+    <string name="situational_learning">情境教学</string>
+    <string name="right">正确</string>
+    <string name="wrong">错误</string>
+    <string name="word">文字</string>
+    <string name="voc">词汇</string>
+    <string name="level1">级别1</string>
+    <string name="level2">级别2</string>
+    <string name="level3">级别3</string>
+    <string name="Multiple_choice">多项选择</string>
+    <string name="test">快拼快答
+</string>
+
     <string name="expalnt1">汉字的字形结构可分为多少类型？</string>
     <string name="expalnt2">一般而言，汉字的字形结构可分为「独体字」和「合体字」两大类。当中合体字又可分为「左右结构」、「上下结构」及「包围结构」三种。</string>
     <string name="Single_structure">单一结构</string>

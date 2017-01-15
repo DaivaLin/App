@@ -11,11 +11,10 @@
     <string name="health">स्वास्थ्य</string>
     <string name="travel">यात्रा</string>
     <string name="number_of_questions">सवाल</string>
-    <string name="right">सही</string>
-    <string name="wrong">गलत</string>
+
     <string name="go_back">पिछला पृष्ठ</string>
 
-    <string name="structure">संरचना</string>
+
     <string name="expalnt1">आकार का संरचना अक्षर के कई प्रकार में विभाजित किया जा सकता है?</string>
     <string name="expalnt2">सामान्य तौर पर, चीनी अक्षरों के आकार की संरचना "एक अक्षर 'और' शब्द फिट 'दो श्रेणियों में विभाजित किया जा सकता है। जो ऊपर और संरचना "और" संरचना तीन से "घिरा नीचे फिट शब्द में विभाजित किया जा सकता है" संरचना के बारे में, ""।</string>
     <string name="Single_structure">एकात्मक संरचना</string>
@@ -58,4 +57,16 @@
     <string-array name ="easy_shopping_arry">
         <item>item>खरीदें</item><item>बेचना</item><item>धन्यवाद</item><item>कोई बात नहीं।</item><item>मैं माफी चाहता हूँ</item><item>कभी मन</item><item>अलविदा</item><item>माफ़ कीजिये</item><item>कैसे दयालु</item><item>स्वागत</item><item>परिवर्तन</item><item>बात</item><item>खोज</item><item>क्या</item><item>सोच</item><item>आशा</item><item>सस्ता</item><item>महंगा</item><item>आसान</item><item>कठिन</item><item>काश</item><item>विशेष</item><item>दुकान</item><item>दुकान</item><item>बाजार</item><item>महत्त्वपूर्ण</item><item>को</item><item>है</item><item>किलोग्राम</item><item>रंग</item><item>तुलना</item><item>दिखावट</item><item>अप लाइन</item><item>क्रेडिट कार्ड</item><item>पुराना</item><item>कीमत</item><item>कीमत</item><item>दोगुना</item><item>महान</item><item>लंबे समय तक</item><item>छोटा</item><item>कम</item><item>नई</item><item>पैसा</item><item>युआन</item><item>अनुपात</item><item>कितना</item><item>ध्यान से</item><item>जैसा</item><item>और</item><item>साथ</item><item>एक साथ</item><item>नहीं</item><item>नहीं</item><item>अच्छा</item><item>संतुष्टि</item><item>अतिथि</item><item>शरमाना</item><item>सभ्य</item><item>निरीक्षण</item><item>बटुआ</item><item>सामान्य</item><item>अजीब बात है</item><item>गंदा</item><item>लगभग</item><item>कुल मिलाकर</item><item>ज़रूरत</item><item>अन्य</item><item>की जरूरत नहीं है</item>
     </string-array>
+
+    <string name="structure_learning">संरचना शिक्षण</string>
+    <string name="situational_learning">स्थिति शिक्षण</string>
+    <string name="right">सही</string>
+    <string name="wrong">गलत</string>
+    <string name="word">शब्द</string>
+    <string name="voc">शब्दावली</string>
+    <string name="level1">स्तर 1</string>
+    <string name="level2">लेवल 2</string>
+    <string name="level3">स्तर 3</string>
+    <string name="Multiple_choice">बहुविकल्पी</string>
+    <string name="test">परीक्षण</string>
 </resources>

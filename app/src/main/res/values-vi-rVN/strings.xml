@@ -11,11 +11,20 @@
     <string name="health">Sức khỏe</string>
     <string name="travel">đi du lịch</string>
     <string name="number_of_questions">câu hỏi</string>
-    <string name="right">đúng</string>
-    <string name="wrong">sai rồi</string>
     <string name="go_back">Trang trước</string>
 
-    <string name="structure">Cấu trúc</string>
+    <string name="structure_learning">Giảng dạy kết cấu</string>
+    <string name="situational_learning">Giảng dạy tình huống</string>
+    <string name="right">Đúng</string>
+    <string name="wrong">Sai rồi</string>
+    <string name="word">Lời</string>
+    <string name="voc">Từ vựng</string>
+    <string name="level1">Cấp độ 1</string>
+    <string name="level2">Cấp độ 2</string>
+    <string name="level3">Cấp độ 3</string>
+    <string name="Multiple_choice">Nhiều lựa chọn</string>
+    <string name="test">Thử nghiệm</string>
+
     <string name="expalnt1">Cấu hình có thể được chia thành nhiều loại ký tự?</string>
     <string name="expalnt2">Nhìn chung, cơ cấu hình của các nhân vật Trung Quốc có thể được chia thành "nhân vật duy nhất" và "phù hợp với từ" hai loại. Mà có thể được chia thành từ phù hợp "về cấu trúc", "lên và xuống các cấu trúc" và "cấu trúc bao quanh bởi" ba.</string>
     <string name="Single_structure">Cấu trúc đơn nhất</string>

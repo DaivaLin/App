@@ -11,11 +11,21 @@
     <string name="health">Kesihatan</string>
     <string name="travel">Perjalanan</string>
     <string name="number_of_questions">Soalan</string>
-    <string name="right">Betul</string>
-    <string name="wrong">Salah</string>
+
     <string name="go_back">Halaman sebelumnya</string>
 
-    <string name="structure">Struktur</string>
+    <string name="structure_learning">Pengajaran struktur</string>
+    <string name="situational_learning">Pengajaran situasional</string>
+    <string name="right">Betul</string>
+    <string name="wrong">Salah</string>
+    <string name="word">Perkataan</string>
+    <string name="voc">Perbendaharaan kata</string>
+    <string name="level1">Tahap 1</string>
+    <string name="level2">Tahap 2</string>
+    <string name="level3">Tahap 3</string>
+    <string name="Multiple_choice">Pelbagai pilihan</string>
+    <string name="test">Ujian</string>
+
     <string name="expalnt1">Struktur berbentuk boleh dibahagikan kepada pelbagai jenis watak-watak?</string>
     <string name="expalnt2">Secara umum, struktur berbentuk aksara Cina boleh dibahagikan kepada "Watak tunggal" dan "layak perkataan" dua kategori. Yang boleh dibahagikan ke patut perkataan "mengenai struktur", "atas dan ke bawah struktur" dan "struktur dikelilingi oleh" tiga.</string>
     <string name="Single_structure">Struktur kesatuan</string>

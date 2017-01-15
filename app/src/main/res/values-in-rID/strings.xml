@@ -11,11 +11,21 @@
     <string name="health">Kesehatan</string>
     <string name="travel">Perjalanan</string>
     <string name="number_of_questions">Pertanyaan</string>
-    <string name="right">Kanan</string>
-    <string name="wrong">Salah</string>
+
     <string name="go_back">Halaman sebelumnya</string>
 
-    <string name="structure">Struktur</string>
+    <string name="structure_learning">Mengajar struktur</string>
+    <string name="situational_learning">Mengajar situasional</string>
+    <string name="right">Benar</string>
+    <string name="wrong">Salah</string>
+    <string name="word">Kata</string>
+    <string name="voc">Kosa kata</string>
+    <string name="level1">Tingkat 1</string>
+    <string name="level2">Tingkat 2</string>
+    <string name="level3">Tingkat 3</string>
+    <string name="Multiple_choice">Pilihan ganda</string>
+    <string name="test">Uji</string>
+
     <string name="expalnt1">Struktur berbentuk dapat dibagi menjadi banyak jenis karakter?</string>
     <string name="expalnt2">Secara umum, struktur berbentuk karakter Cina dapat dibagi menjadi "karakter tunggal" dan "cocok kata" dua kategori. Yang dapat dibagi menjadi kata fit "tentang struktur," "atas dan ke bawah struktur" dan "struktur dikelilingi oleh" tiga.</string>
     <string name="Single_structure">Struktur kesatuan</string>

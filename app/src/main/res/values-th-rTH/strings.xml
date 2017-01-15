@@ -11,11 +11,20 @@
     <string name="health">สุขภาพ</string>
     <string name="travel">การเดินทาง</string>
     <string name="number_of_questions">คำถาม</string>
-    <string name="right">ขวา</string>
-    <string name="wrong">ไม่ถูกต้อง</string>
-    <string name="go_back">หน้าเดิม</string>
 
-    <string name="structure">โครงสร้าง</string>
+    <string name="go_back">หน้าเดิม</string>
+    <string name="structure_learning">การเรียนการสอนโครงสร้าง</string>
+    <string name="situational_learning">การเรียนการสอนสถานการณ์</string>
+    <string name="right">แก้ไข</string>
+    <string name="wrong">ไม่ถูกต้อง</string>
+    <string name="word">คำ</string>
+    <string name="voc">ศัพท์</string>
+    <string name="level1">ระดับ 1</string>
+    <string name="level2">ระดับที่ 2</string>
+    <string name="level3">ระดับ 3</string>
+    <string name="Multiple_choice">ปรนัย</string>
+    <string name="test">ทดสอบ</string>
+
     <string name="expalnt1">โครงสร้างรูปสามารถแบ่งออกเป็นหลายประเภทของตัวละคร?</string>
     <string name="expalnt2">โดยทั่วไปโครงสร้างรูปของตัวอักษรจีนสามารถแบ่งออกเป็น "ตัวอักษรเดียว" และ "พอดีคำว่า" สองประเภท ซึ่งสามารถแบ่งออกเป็นพอดีคำว่า "เกี่ยวกับโครงสร้าง", "ขึ้นและลงโครงสร้าง" และ "โครงสร้างล้อมรอบด้วย" สาม</string>
     <string name="Single_structure">โครงสร้างรวม</string>
