@@ -9,7 +9,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.sinni.app.SituationSelect">
+    tools:context="com.example.sinni.app.SituationSelect"
+    android:background="@drawable/bg_18">
 
     <ImageView
         android:layout_width="100dp"
@@ -27,7 +28,8 @@
         android:layout_below="@+id/shopping"
         android:layout_alignLeft="@+id/shopping"
         android:layout_alignStart="@+id/shopping"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="@color/black" />
 
     <ImageView
         android:layout_width="100dp"
@@ -54,7 +56,8 @@
         android:layout_below="@+id/travel"
         android:layout_centerHorizontal="true"
         android:id="@+id/textView16"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="@color/black" />
 
     <TextView
         android:text="@string/entertainment"
@@ -64,7 +67,8 @@
         android:textAlignment="center"
         android:layout_below="@+id/entertainment"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/black" />
 
     <ImageView
         android:layout_width="100dp"
@@ -85,7 +89,8 @@
         android:textAlignment="center"
         android:layout_below="@+id/b"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@color/black" />
 
     <ImageView
         android:layout_width="100dp"
@@ -104,7 +109,8 @@
         android:textAlignment="center"
         android:layout_below="@+id/b"
         android:layout_alignLeft="@+id/b"
-        android:layout_alignStart="@+id/b" />
+        android:layout_alignStart="@+id/b"
+        android:textColor="@color/black" />
 
     <TextView
         android:text="@string/greeting"
@@ -114,7 +120,8 @@
         android:textAlignment="center"
         android:layout_below="@+id/greeting"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/black" />
 
     <ImageView
         android:layout_width="100dp"
@@ -151,7 +158,8 @@
         android:textAlignment="center"
         android:layout_below="@+id/food"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@color/black" />
 
     <TextView
         android:text="@string/health"
@@ -161,7 +169,8 @@
         android:textAlignment="center"
         android:layout_above="@+id/edu"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@color/black" />
 
     <ImageView
         android:layout_width="100dp"
@@ -180,6 +189,7 @@
         android:textAlignment="center"
         android:layout_below="@+id/car"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/black" />
 
 </RelativeLayout>

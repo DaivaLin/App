@@ -15,7 +15,6 @@
     <string name="wrong">答錯</string>
     <string name="go_back">上一頁</string>
 
-    <string name="structure">結構</string>
     <string name="expalnt1">漢字的字形結構可分為多少類型？</string>
     <string name="expalnt2">一般而言，漢字的字形結構可分為「獨體字」和「合體字」兩大類。當中合體字又可分為「左右結構」、「上下結構」及「包圍結構」三種。</string>
     <string name="Single_structure">單一結構</string>
@@ -63,5 +62,10 @@
         <item>ten</item><item>hundred</item><item>thousand</item><item>Million</item><item>boss</item><item>buy</item><item>Sell</item><item>Thank you</item><item>You are welcome</item><item>I am sorry</item><item>Never mind</item><item>Goodbye</item><item>Excuse me</item><item>how is it</item><item>welcome</item><item>change</item><item>thing</item><item>Find</item><item>what</item><item>want</item><item>hope</item><item>Cheap</item><item>expensive</item><item>easy</item><item>difficult</item><item>want</item><item>delicious</item><item>store</item><item>shop</item><item>market</item><item>important</item><item>give</item><item>For</item><item>Have</item><item>kg</item><item>Colour</item><item>yellow</item><item>white</item><item>clothes</item><item>sock</item><item>pants</item><item>skirt</item><item>Shoes</item><item>double</item><item>Big</item><item>long</item><item>small</item><item>short</item><item>new</item><item>money</item><item>Dollar</item><item>Comparison</item><item>How many</item><item>Be careful</item><item>same</item><item>and</item><item>with</item><item>together</item><item>not</item><item>No</item><item>good </item><item>satisfaction</item><item>The guests</item><item>Sorry</item><item>polite</item><item>an examination</item><item>wallet</item><item>general</item><item>strange</item><item>dirty</item><item>almost</item><item>Altogether</item><item>need</item><item>other</item><item>No need to</item>
     </string-array>
 
+
+    <string name="structure_learning">結構教學</string>
+    <string name="situational_learning">情境教學</string>
+    <string name="word">文字</string>
+    <string name="voc">詞彙</string>
 
 </resources>

@@ -10,7 +10,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.sinni.app.Home_page">
+    tools:context="com.example.sinni.app.Home_page"
+    android:background="@drawable/bg_5">
 
     <ImageView
         app:srcCompat="@drawable/icon_structure"
@@ -21,14 +22,15 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="漢字結構"
+        android:text="@string/structure_learning"
         android:id="@+id/textView2"
         android:textAlignment="center"
         android:textSize="24sp"
         android:layout_width="300dp"
         android:layout_below="@+id/a"
         android:layout_centerHorizontal="true"
-        android:layout_height="40dp" />
+        android:layout_height="40dp"
+        android:textColor="@android:color/background_light" />
 
     <ImageView
         app:srcCompat="@drawable/icon_situation"
@@ -40,7 +42,7 @@
         android:layout_alignStart="@+id/a" />
 
     <TextView
-        android:text="情境教學"
+        android:text="@string/situational_learning"
         android:id="@+id/textView"
         android:layout_height="30dp"
         android:textAlignment="center"
@@ -48,7 +50,8 @@
         android:layout_width="300dp"
         android:layout_below="@+id/b"
         android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
+        android:layout_alignStart="@+id/textView2"
+        android:textColor="@android:color/background_light" />
 
 
 </RelativeLayout>
