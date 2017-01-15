@@ -11,8 +11,6 @@ public class Home_page extends AppCompatActivity {
     ImageView a,b;
     Bundle bundle;
     Intent intent;
-    String Situation;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,20 +19,11 @@ public class Home_page extends AppCompatActivity {
         a = (ImageView) findViewById(R.id.a);
         b = (ImageView) findViewById(R.id.b);
        // floatingButton();
-       // bundle = new Bundle();
         intent = new Intent();
-        if(this.getIntent().getExtras()!=null) {
-            Bundle bundle = this.getIntent().getExtras();
-            Situation = bundle.getString("Situation");
-        }
         a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 intent = new Intent(Home_page.this,StructureTeaching.class);
-                if(Situation!=null) {
-                    bundle.putString("Situation", Situation);
-                    intent.putExtras(bundle);
-                }
                 startActivity(intent);
             }
         });
@@ -42,10 +31,6 @@ public class Home_page extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 intent = new Intent(Home_page.this, SituationSelect.class);
-                if(Situation!=null) {
-                    bundle.putString("Situation", Situation);
-                    intent.putExtras(bundle);
-                }
                 startActivity(intent);
             }
         });

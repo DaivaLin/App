@@ -5,13 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import static com.example.sinni.app.R.id.re;
 
 public class End extends AppCompatActivity {
     TextView count,correct,wrong;
     int count1,correct1,wrong1;
     String Situation,Word_or_Voc;
-    Button re;
+    ImageView re;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +22,7 @@ public class End extends AppCompatActivity {
         count=(TextView)findViewById(R.id.count);
         correct=(TextView)findViewById(R.id.correct);
         wrong=(TextView)findViewById(R.id.wrong);
-        re=(Button)findViewById(R.id.re);
+        re=(ImageView)findViewById(R.id.re);
         if(getIntent().getExtras()!=null){
             Bundle bundle3=getIntent().getExtras();
             Situation = bundle3.getString("Situation");

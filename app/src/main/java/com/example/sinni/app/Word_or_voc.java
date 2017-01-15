@@ -10,7 +10,7 @@ public class Word_or_voc extends AppCompatActivity {
 
     TextView Vocabulary,Word;
  String Situation;
-    Bundle bundle;
+    Bundle bundle,bundle1;
     Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +18,8 @@ public class Word_or_voc extends AppCompatActivity {
         setContentView(R.layout.activity_word_or_voc);
         setTitle("Choose");
         if(this.getIntent().getExtras()!=null) {
-            bundle = this.getIntent().getExtras();
-            Situation = bundle.getString("Situation");
+            bundle1 = this.getIntent().getExtras();
+            Situation = bundle1.getString("Situation");
         }
         Vocabulary = (TextView) findViewById(R.id.Vocabulary);
         Vocabulary.setOnClickListener(new View.OnClickListener() {

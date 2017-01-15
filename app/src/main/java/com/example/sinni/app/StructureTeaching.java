@@ -34,11 +34,6 @@ public class StructureTeaching extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_structure_teaching);
         //浮動button
-        if(getIntent().getExtras()!=null){
-            Bundle bundle3=getIntent().getExtras();
-            Situation = bundle3.getString("Situation");
-        }
-
         floatingButton();
 //第一級
         leftAndRightCombination = (ImageView) findViewById(R.id.leftandrightcombination);
