@@ -12,38 +12,24 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.IOException;
 
-import static android.R.attr.duration;
-
 public class UpperAndLowerCombinations extends AppCompatActivity {
-        //上下字
-        int[] animationword =new int[]{R.raw.animationword101,R.raw.animationword104,R.raw.animationword107,R.raw.animationword1010,R.raw.animationword1013,R.raw.animationword1016,R.raw.animationword1019,R.raw.animationword1022,R.raw.animationword111,R.raw.animationword114,R.raw.animationword117};
-        int[][] animationword1 = new int[][]{{R.drawable.first101,R.drawable.first102,R.drawable.first103}, {R.drawable.first104, R.drawable.first105, R.drawable.first106}, {R.drawable.first107, R.drawable.first108, R.drawable.first109},{R.drawable.first1010, R.drawable.first1011, R.drawable.first1012},{R.drawable.first1013, R.drawable.first1014, R.drawable.first1015},{R.drawable.first1016, R.drawable.first1017, R.drawable.first1018},{R.drawable.first1019, R.drawable.first1020, R.drawable.first1021},{R.drawable.first1022, R.drawable.first1023, R.drawable.first1024},{R.drawable.first111,	R.drawable.first112,	R.drawable.first113}};
-    int[][] animationword2 = new int[][]{{R.drawable.part31, R.drawable.part32}
-            , {R.drawable.part40, R.drawable.part94}
-            , {R.drawable.part30, R.drawable.part18}
-            , {R.drawable.part28, R.drawable.part16}
-            , {R.drawable.part24, R.drawable.part57}
-            , {R.drawable.part19, R.drawable.part15}
-            , {R.drawable.part70, R.drawable.part64}
-            , {R.drawable.part91, R.drawable.part72}
-            , {R.drawable.part5, R.drawable.part10}
-            , {R.drawable.part39, R.drawable.part29}
-            , {R.drawable.part12, R.drawable.part9}
-    };
-        ImageView traditional;
-        ImageView[] img = new ImageView[2];
-        GifAnimationDrawable gif;
-        float x, y;
-        int mx, my; // 圖片被拖曳的X ,Y軸距離長度
-        String backgroundImageName;
-        int a=0,tine=800,ca=0;
-        TextView textView1,textView2;
-        Handler handler= new Handler();
-        int count1=0;
+    int[] animationword =new int[]{R.raw.animationword101,R.raw.animationword104,R.raw.animationword107,R.raw.animationword1010,R.raw.animationword1013,R.raw.animationword1016,R.raw.animationword1019,R.raw.animationword1022};
+    int[][] animationword1 = new int[][]{{R.drawable.first101,R.drawable.first102,R.drawable.first103}, {R.drawable.first104, R.drawable.first105, R.drawable.first106}, {R.drawable.first107, R.drawable.first108, R.drawable.first109},{R.drawable.first1010, R.drawable.first1011, R.drawable.first1012},{R.drawable.first1013, R.drawable.first1014, R.drawable.first1015},{R.drawable.first1016, R.drawable.first1017, R.drawable.first1018},{R.drawable.first1019, R.drawable.first1020, R.drawable.first1021},{R.drawable.first1022, R.drawable.first1023, R.drawable.first1024}};
+    int[][] animationword2 = new int[][]{{R.drawable.part31, R.drawable.part32}, {R.drawable.part40, R.drawable.part94}, {R.drawable.part30, R.drawable.part18}, {R.drawable.part28, R.drawable.part16}, {R.drawable.part24, R.drawable.part57}, {R.drawable.part19, R.drawable.part15}, {R.drawable.part70, R.drawable.part64}, {R.drawable.part91, R.drawable.part72}, {R.drawable.part5, R.drawable.part10}, {R.drawable.part39, R.drawable.part29}, {R.drawable.part12, R.drawable.part9}};
+    ImageView traditional=null;
+    ImageView[] img = new ImageView[2];
+    GifAnimationDrawable gif;
+    float x=0, y=0;
+    int mx=0, my=0; // 圖片被拖曳的X ,Y軸距離長度
+    String backgroundImageName=null;
+    int a=0,tine=500,ca=0;
+    TextView textView1,textView2;
+    Handler handler= new Handler();
+   String Situation;
+    int count1=0;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -52,19 +38,20 @@ public class UpperAndLowerCombinations extends AppCompatActivity {
             textView1=(TextView)findViewById(R.id.textView) ;
             textView2=(TextView)findViewById(R.id.textView2);
             traditional = (ImageView) findViewById(R.id.traditional);
-            GetImageView();
+            getImageView();
             if(getIntent().getExtras()!=null){
                 Bundle bundle3=getIntent().getExtras();
+                Situation = bundle3.getString("Situation");
                 count1=bundle3.getInt("count");
-                if (count1>animationword.length){
-                    count1=0;
-                }
+            }
+            if (count1==animationword.length){
+                count1=0;
             }
             picture();
             handler.postDelayed(new Runnable(){
                 public void run() {
-                    setanimationword1Img();
-                    SetImge();
+                    traditional.setImageDrawable(ContextCompat.getDrawable(UpperAndLowerCombinations.this,animationword1[count1][0]));
+                    setImge();
                     for (int i = 0; i<img.length; i++) {
                         img[i].setOnTouchListener(imgListener);//觸控時監聽.
                     }
@@ -84,14 +71,14 @@ public class UpperAndLowerCombinations extends AppCompatActivity {
             }
         }
         //初始畫UI
-        public void GetImageView() {
+        public void getImageView() {
             img[0] = (ImageView) findViewById(R.id.part1);
             img[1] = (ImageView) findViewById(R.id.part2);
         }
         //給取圖片
-        public void SetImge() {
+        public void setImge() {
             for (int i =0; i<animationword2[count1].length; i++){
-                Log.e(String.valueOf(count1),String.valueOf(animationword2[count1][i])) ;
+                // Log.e(String.valueOf(count1),String.valueOf(animationword2[count1][i])) ;
                 img[i].setImageDrawable(ContextCompat.getDrawable(this,animationword2[count1][i]));
                 img[i].setTag(animationword2[count1][i]);
             }
@@ -115,65 +102,15 @@ public class UpperAndLowerCombinations extends AppCompatActivity {
                         break;
                     case MotionEvent.ACTION_UP:// 離開圖片時
                         if(mx >= 50 && mx <= 450 && my >= 20 && my <= 400){
-                            About(v);//上下字判斷
+                            about(v);//上下字判斷
                         }
-
                     break;
                 }
                 Log.d("address", String.valueOf(mx) + "~~" + String.valueOf(my)); // 記錄目前位置
                 return true;
             }
         };
-        public void Ualc(View v){
-            backgroundImageName = String.valueOf(v.getTag());
-            if(a==0)
-            {
-                if(mx >= 100 && mx <= 200 && my >= 10 && my <= 600) {
-                    if (backgroundImageName.equals(String.valueOf(animationword2[count1][0]))) {
-                        v.setVisibility(View.INVISIBLE);
-                        a++;
-                        //Resources resources = getResources();
-                        traditional.setImageDrawable(ContextCompat.getDrawable(this,animationword1[count1][1]));
-                        showToastMessage("正確", tine);
-                    } else {
-                        showToastMessage("錯誤", tine);
-                    }
-                }else{
-                    showToastMessage("錯誤", tine);
-                }
-            }
-            else if(a==1){
-                if(mx >= 200 && mx <= 300 && my >= 10 && my <= 600) {
-                    if(backgroundImageName.equals(String.valueOf(animationword2[count1][1]))) {
-                        v.setVisibility(View.INVISIBLE);
-                        //traditional.setImageResource(animationword1[count1][2]);
-                        traditional.setImageDrawable(ContextCompat.getDrawable(this,animationword1[count1][2]));
-                        showToastMessage("正確",tine);
-                        a++;
-                    }else{
-                        showToastMessage("錯誤",tine);
-                    }
-                }else{
-                    showToastMessage("錯誤",tine);
-                }
-            }else if(a==2){
-                if(mx >= 300 && mx <= 400 && my >= 50 && my <= 400) {
-                    if(backgroundImageName.equals(String.valueOf(animationword2[count1][2]))){
-                        v.setVisibility(View.INVISIBLE);
-                        //traditional.setImageResource(animationword1[count1][3]);
-                        traditional.setImageDrawable(ContextCompat.getDrawable(this,animationword1[count1][3]));
-                        showToastMessage("正確",tine);
-                        a++;
-                        //SetStart();
-                    }else{
-                        showToastMessage("錯誤",tine);
-                    }
-                }else{
-                    showToastMessage("錯誤",tine);
-                }
-            }
-        }
-        public void About(View v){
+        public void about(View v){
             backgroundImageName = String.valueOf(v.getTag());
             if(a==0){
                 if (mx >= 50 && mx <= 450 && my >= 0 && my <= 150) {
@@ -182,12 +119,12 @@ public class UpperAndLowerCombinations extends AppCompatActivity {
                         a++;
                         traditional.setImageDrawable(ContextCompat.getDrawable(UpperAndLowerCombinations.this,animationword1[count1][1]));
                         //  traditional.setImageResource(animationword1[count1][1]);
-                        showToastMessage("正確",tine);
+                        //showToastMessage("正確",tine);
                     }else{
-                        showToastMessage("錯誤",tine);
+                        //showToastMessage("錯誤",tine);
                     }
                 }else{
-                    showToastMessage("錯誤",tine);
+                   // showToastMessage("錯誤",tine);
                 }
             }else{
                 if (mx >= 50 && mx <= 450 && my >= 150 && my <= 400) {
@@ -195,55 +132,40 @@ public class UpperAndLowerCombinations extends AppCompatActivity {
                     {
                         v.setVisibility(View.INVISIBLE);
                         traditional.setImageDrawable(ContextCompat.getDrawable(this,animationword1[count1][2]));
-                        showToastMessage("正確",tine);
+                        //showToastMessage("正確",tine);
                         a++;
-                        SetStart();
+                        setStart();
                     }else{
-                        showToastMessage("錯誤",tine);
+                        //showToastMessage("錯誤",tine);
                     }
                 }else{
-                    showToastMessage("錯誤",tine);
+                    //showToastMessage("錯誤",tine);
                 }
             }
         }
-        public void showToastMessage(String text, int duratin){
-            final Toast toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
-            toast.show();
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    toast.cancel();
-                }
-            }, duration);
-        }
-        private void SetStart() {
+        private void setStart() {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
             builder.setMessage("正確")
                     .setCancelable(false)
                     .setPositiveButton("next", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            Refresh();
+                            refresh();
                         }
                     });
             AlertDialog alert = builder.create();
             alert.show();
         }
-        public void Refresh() {
+        public void refresh() {
             //自己调到自己的activity
             //  finish();
+            count1++;
             Intent intent  = new Intent(UpperAndLowerCombinations.this, UpperAndLowerCombinations.class);
             Bundle bundle = new Bundle();
-            count1++;
             bundle.putInt("count",count1);
             intent.putExtras(bundle);
             startActivity(intent);
             finish();
-        }
-        void setanimationword1Img(){
-            traditional.setImageResource(animationword1[count1][0]);
         }
     }
 

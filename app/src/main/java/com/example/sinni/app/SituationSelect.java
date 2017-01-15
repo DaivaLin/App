@@ -30,6 +30,7 @@ public class SituationSelect extends AppCompatActivity {
                 bundle.putString("Situation", "food");
                 intent.putExtras(bundle);
                 startActivity(intent);
+                //finish();
             }
         });
         shopping.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +40,7 @@ public class SituationSelect extends AppCompatActivity {
                 bundle.putString("Situation", "shopping");
                 intent.putExtras(bundle);
                 startActivity(intent);
+                //finish();
             }
         });
         car.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +50,7 @@ public class SituationSelect extends AppCompatActivity {
                 bundle.putString("Situation", "car");
                 intent.putExtras(bundle);
                 startActivity(intent);
+                //finish();
             }
         });
 
@@ -56,7 +59,6 @@ public class SituationSelect extends AppCompatActivity {
         food = (ImageView) findViewById(R.id.food);
         shopping = (ImageView) findViewById(R.id.shopping);
         car = (ImageView) findViewById(R.id.car);
-
     }
 
     //浮動button-function

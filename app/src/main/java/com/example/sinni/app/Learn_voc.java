@@ -72,8 +72,8 @@ public class Learn_voc extends AppCompatActivity implements TextToSpeech.OnInitL
 
 
        tts = new TextToSpeech(this, this);
-//        tts.speak(vocabulary[0], TextToSpeech.QUEUE_FLUSH, null);     //發音
-//        showGIF.setImageResource(imgIds[0]);
+        tts.speak(vocabulary[0], TextToSpeech.QUEUE_FLUSH, null);     //發音
+        showGIF.setImageResource(imgIds[0]);
         setvalue(0);
         last.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,9 +106,9 @@ public class Learn_voc extends AppCompatActivity implements TextToSpeech.OnInitL
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Learn_voc.this,Home_page .class);
+                Intent intent = new Intent(Learn_voc.this,Learn_or_test .class);
                 startActivity(intent);
-
+                finish();
             }
         });
 

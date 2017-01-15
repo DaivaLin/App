@@ -18,10 +18,7 @@ public class Multiple_choice extends AppCompatActivity implements View.OnClickLi
             {"腳踏車","bicycle"},{"走路","walk"},{"計程車","taxi"},{"地鐵","subway"},{"車站","station"},{"火車", "train"}
             ,{"飛機","aircraft"},{"飛機場","airport"},{"公車","bus"},{"車","car"},{"馬路","road"},{"十字路口","crossroads"},{"地圖","map"},{"地址","address"},{"市","city"},{"國","country"},{"汽車","car"},{"輛","vehicle"},{"船","boat"},{"停車場","parking lot"},{"搭","take"},{"起飛","take off"}
             ,{"出","out"},{"出來","come out"},{"進","progress"},{"進去","go inside"},{"回去","go back"},{"路口","intersection"},{"紅綠燈","traffic light"},{"左","left"},{"右","right"},{"外","outer"},{"裡","in"},{"下","lower"},{"上","on"},{"這邊","here"},{"出發","set off"},{"離開","go away"}
-            ,{"向","to"},{"經過","after"},{"停","stop"},{"出口","export"},{"公里","km"},{"方向","direction"},{"出現","appear"},{"交通","traffic"},{"救護車","ambulance"}
-    };
-
-
+            ,{"向","to"},{"經過","after"},{"停","stop"},{"出口","export"},{"公里","km"},{"方向","direction"},{"出現","appear"},{"交通","traffic"},{"救護車","ambulance"}};
     String[] material=new String[]{"me","country","come","a","this","count","go","as","Male","look","separate","part","push","enter","think","return","fruit","fe","protect","disappear","poem","person","bright"};
     String[] option;
     int number,cou=30;
@@ -30,7 +27,7 @@ public class Multiple_choice extends AppCompatActivity implements View.OnClickLi
     Random run=new Random();
     int tine=800;
     private Handler handler = new Handler( );
-
+    String Situation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +35,10 @@ public class Multiple_choice extends AppCompatActivity implements View.OnClickLi
         GetButton();
         time = (TextView) findViewById(R.id.time);
         Question = (TextView) findViewById(R.id.Question);
-
-        GetBud();
+        getBud();
         number = run.nextInt(quesion_arry.length);
         Question.setText(quesion_arry[number][number1]);
-        SetOptionEn();
+        setOptionEn();
         for (int i = 0; i < 4; i++) {
             button[i].setOnClickListener((View.OnClickListener) this);
         }
@@ -65,8 +61,8 @@ public class Multiple_choice extends AppCompatActivity implements View.OnClickLi
         if(count<10){
             number = run.nextInt(quesion_arry.length);
             Question.setText(quesion_arry[number][number1]);
-            SetOptionEn();}else{
-            ResultAction();
+            setOptionEn();}else{
+            resultAction();
         }
     }
 
@@ -77,7 +73,7 @@ public class Multiple_choice extends AppCompatActivity implements View.OnClickLi
         button[3]=(Button)findViewById(R.id.button6);
     }
 
-    void SetOptionEn(){
+    void setOptionEn(){
         option=new String[4];
         option[0]=quesion_arry[number][1];
         option[1]=material[run.nextInt(material.length)];
@@ -115,19 +111,20 @@ public class Multiple_choice extends AppCompatActivity implements View.OnClickLi
             }
         }, duration);
     }
-    void GetBud(){
+    void getBud(){
         if(getIntent().getExtras()!=null){
             Bundle bundle1=getIntent().getExtras();
+            Situation = bundle1.getString("Situation");
             count=bundle1.getInt("count");
             correct =bundle1.getInt("correct");
             wrong=bundle1.getInt("wrong");
             //         aTextView.setText(String.valueOf(count));
             if(count==10){
-                ResultAction();
+                resultAction();
             }
         }
     }
-    void ResultAction(){
+    void resultAction(){
         Intent intent=new Intent();
         intent.setClass(Multiple_choice.this,Multiple_choice_score.class);
         Bundle bundle2=new Bundle();
@@ -147,7 +144,7 @@ public class Multiple_choice extends AppCompatActivity implements View.OnClickLi
                 cou--;
                 handler.postDelayed(runnable, 1000);
             }else{
-                ResultAction();
+                resultAction();
             }
         }
     };

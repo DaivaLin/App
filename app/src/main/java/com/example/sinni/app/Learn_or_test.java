@@ -10,25 +10,24 @@ public class Learn_or_test extends AppCompatActivity {
 
     TextView Learn,Test ;
     String Situation,Word_or_Voc;
-    Bundle bundle;
+    Bundle bundle,bundle1;
     Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learn_or_test);
-
-        intent = new Intent();
-        bundle = this.getIntent().getExtras();
-        Word_or_Voc = bundle.getString("Word_or_Voc");
-        Situation = bundle.getString("Situation");
-        bundle = new Bundle();
-
+        if(this.getIntent().getExtras()!=null) {
+            bundle1 = this.getIntent().getExtras();
+            Word_or_Voc = bundle1.getString("Word_or_Voc");
+            Situation = bundle1.getString("Situation");
+        }
 
         Learn = (TextView) findViewById(R.id.Learn);
         Learn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 intent = new Intent();
+                bundle = new Bundle();
                 bundle.putString("Situation", Situation);
                 bundle.putString("Word_or_Voc", Word_or_Voc);
                 bundle.putString("Learn_or_Test", "Learn");
@@ -43,29 +42,34 @@ public class Learn_or_test extends AppCompatActivity {
                 }
                 intent.putExtras(bundle);
                 startActivity(intent);
-
-            }
-        });
+                finish();
+            }});
 
         Test = (TextView) findViewById(R.id.Test);
+
         Test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bundle.putString("Situation", Situation);
-                bundle.putString("Word_or_Voc", Word_or_Voc);
-                bundle.putString("Learn_or_Test", "Test");
                 switch (Word_or_Voc){
                     case "Word":
-                        intent = new Intent(Learn_or_test.this,Learn_word.class);
+                        bundle = new Bundle();
+                        bundle.putString("Situation", Situation);
+                        bundle.putString("Word_or_Voc", Word_or_Voc);
+                        bundle.putString("Learn_or_Test", "Test");
+                        intent = new Intent(Learn_or_test.this,StructureExercise.class);
+
                         break;
                     case "Voc":
+                        bundle = new Bundle();
+                        bundle.putString("Situation", Situation);
+                        bundle.putString("Word_or_Voc", Word_or_Voc);
+                        bundle.putString("Learn_or_Test", "Test");
                         intent = new Intent(Learn_or_test.this,TextMultiple.class);
+                        intent.putExtras(bundle);
                         break;
                 }
-                intent.putExtras(bundle);
                 startActivity(intent);
-            }
-        });
-
+                finish();
+            }});
     }
 }

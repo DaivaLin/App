@@ -18,11 +18,15 @@ public class Structures_level2 extends AppCompatActivity {
             ,leftThreePacks
             ,allSurrounded;
     Intent it;
+    String Situation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_structures_level2);
-
+        if(getIntent().getExtras()!=null){
+            Bundle bundle3=getIntent().getExtras();
+            Situation = bundle3.getString("Situation");
+        }
         //浮動button
         floatingButton();
 
@@ -40,7 +44,7 @@ public class Structures_level2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                  it=new Intent();
-                // it.setClass(StructureTeaching.this,LeftThreePacks.class);
+                 it.setClass(Structures_level2.this,LeftThreePacks.class);
                 startActivity(it);
             }
         });
@@ -50,7 +54,7 @@ public class Structures_level2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                  it=new Intent();
-                // it.setClass(StructureTeaching.this,UnderTheThreePacks.class);
+                it.setClass(Structures_level2.this,UnderTheThreePacks.class);
                 startActivity(it);
             }
         });
@@ -60,7 +64,7 @@ public class Structures_level2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                  it=new Intent();
-                //  it.setClass(StructureTeaching.this,OnTheThreeBags.class);
+                  it.setClass(Structures_level2.this,OnTheThreeBags.class);
                 startActivity(it);
             }
         });
@@ -70,7 +74,7 @@ public class Structures_level2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                  it=new Intent();
-                //  it.setClass(StructureTeaching.this,LeftLowerPack.class);
+                 it.setClass(Structures_level2.this,LeftLowerPack.class);
                 startActivity(it);
             }
         });
@@ -80,7 +84,7 @@ public class Structures_level2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                  it=new Intent();
-                //  it.setClass(StructureTeaching.this,TopLeftPackage.class);
+                  it.setClass(Structures_level2.this,TopLeftPackage.class);
                 startActivity(it);
             }
         });
@@ -90,7 +94,7 @@ public class Structures_level2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                  it=new Intent();
-                //  it.setClass(StructureTeaching.this,RightUpperPackage.class);
+                 it.setClass(Structures_level2.this,RightUpperPackage.class);
                 startActivity(it);
             }
         });
@@ -100,7 +104,7 @@ public class Structures_level2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                  it=new Intent();
-                //   it.setClass(StructureTeaching.this,AllSurrounded.class);
+                   it.setClass(Structures_level2.this,AllSurrounded.class);
                 startActivity(it);
             }
         });

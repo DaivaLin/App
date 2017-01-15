@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class Word_or_voc extends AppCompatActivity {
 
     TextView Vocabulary,Word;
-    String Situation;
+ String Situation;
     Bundle bundle;
     Intent intent;
     @Override
@@ -17,20 +17,21 @@ public class Word_or_voc extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_or_voc);
         setTitle("Choose");
-        bundle = this.getIntent().getExtras();
-        Situation = bundle.getString("Situation");
-        bundle = new Bundle();
+        if(this.getIntent().getExtras()!=null) {
+            bundle = this.getIntent().getExtras();
+            Situation = bundle.getString("Situation");
+        }
         Vocabulary = (TextView) findViewById(R.id.Vocabulary);
         Vocabulary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 intent = new Intent(Word_or_voc.this,Learn_or_test.class);
+                bundle = new Bundle();
                 bundle.putString("Situation", Situation);
                 bundle.putString("Word_or_Voc", "Voc");
                // Toast.makeText(getApplicationContext(), "你選擇" +Situation, Toast.LENGTH_SHORT).show();
                 intent.putExtras(bundle);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -39,6 +40,7 @@ public class Word_or_voc extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 intent = new Intent(Word_or_voc.this,Learn_or_test.class);
+                bundle = new Bundle();
                 bundle.putString("Situation", Situation);
                 bundle.putString("Word_or_Voc", "Word");
                 intent.putExtras(bundle);

@@ -7,12 +7,10 @@ import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.MediaController;
 import android.widget.TextView;
@@ -22,50 +20,59 @@ import android.widget.VideoView;
 import java.io.IOException;
 import java.util.Locale;
 
-public class Learn_word extends AppCompatActivity implements TextToSpeech.OnInitListener{
+import static com.example.sinni.app.R.id.listView;
 
+public class Learn_word extends AppCompatActivity implements TextToSpeech.OnInitListener{
+    String[] word =new String[] {"明","件","冰"};
+    //String[] part =new String[]{"日","月","人","牛","冫","水"};
+    String[][] part =new String[][]{{"日","月"},{"イ","牛"},{"冫","水"}};
+    String[] spell = {"míng","jiàn","bīng"};
     String Situation,Word_or_Voc,Learn_or_Test;
-    int[] imgIds;
+    int[]  imgIds = new int[]{R.raw.easy_food_gif1,R.raw.easy_food_gif2,R.raw.easy_food_gif3};
     int p=0;
     ImageView back,last,next,showGIF,sound;
-    MediaController mc;
+    MediaController  mc;
     GifAnimationDrawable gif;
     private TextToSpeech tts;
     ListView mList;
-    ListAdapter mAdapter;
-    Learn_word.Struct[] mItems;
+    ArrayAdapter mAdapter;
     VideoView videoView;
     TextView spel;
-    String[] word = {"明","件","冰"};
-    String[] part = {"日","月","人","牛","冫","水"};
-    String[] spell = {"míng","jiàn","bīng"};
     String[] mean;
     int w = 0;
-    int[] video = {R.raw.easyfoodvideo_sun,R.raw.easyfoodvideo_moon,R.raw.easyfoodvideo_people,R.raw.easyfoodvideo_cow,R.raw.easyfoodvideo_ice2,R.raw.easyfoodvideo_water};
+   // Learn_word.Struct[] mItems = buildData(part[w].length);;
+    TextView t1;
+    int[][] video = new int[][] {{R.raw.easyfoodvideo_sun,R.raw.easyfoodvideo_moon},{R.raw.easyfoodvideo_people,R.raw.easyfoodvideo_cow},{R.raw.easyfoodvideo_ice2,R.raw.easyfoodvideo_water}};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learn_word);
         setTitle("Word");
+        //畫面出始化給與各國文字
         findView();
-       // Toast.makeText(getApplicationContext(), "你選擇" +Word_or_Voc+Situation+Learn_or_Test, Toast.LENGTH_SHORT).show();
-       imgIds = new int[]{R.raw.easy_food_gif1,R.raw.easy_food_gif2,R.raw.easy_food_gif3};
+        mList = (ListView) findViewById(listView);
         tts = new TextToSpeech(this, this);
-
-        mItems = buildData(2);
-
-
         mc = new MediaController(this);
-        mList = (ListView) findViewById(R.id.listView);
-        mAdapter = new ArrayAdapter<Struct>(this,android.R.layout.simple_list_item_2,android.R.id.text1,mItems) {
+        /*mAdapter = new ArrayAdapter<Struct>(this,android.R.layout.simple_list_item_2,android.R.id.text1,mItems) {
             @Override
             public View getView(int pos, View convert, ViewGroup group) {
                 View v = super.getView(pos, convert, group);
-                TextView t1 = (TextView) v.findViewById(android.R.id.text1);
+                t1 = (TextView) v.findViewById(android.R.id.text1);
                 t1.setText(getItem(pos).iName);
                 return v;
             }
-        };
+        };*/
+        //使用ListAdapter來顯示你輸入的文字
+        mAdapter = new ArrayAdapter(this , android.R.layout.simple_list_item_checked);
+        for(int i=0;i<part[w].length;i++) {
+            mAdapter.add(part[w][i]);
+        }
+        mList.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        //設定選擇的模式
+        mList.setAdapter(mAdapter);
+        //將ListAdapter設定至ListView裡面
+
+        //VideoView畫面
         videoView.setVisibility(View.INVISIBLE);
         setvalue(w);
         last.setOnClickListener(new View.OnClickListener() {
@@ -76,8 +83,15 @@ public class Learn_word extends AppCompatActivity implements TextToSpeech.OnInit
                 }else{
                     w = w -1;
                     setvalue(w);
+                    mAdapter.clear();
+                    for(int i=0;i<part[w].length;i++) {
+                        mAdapter.insert(part[w][i],i);
+                    }
+                    mList.setAdapter(mAdapter);
+                    mAdapter.notifyDataSetChanged();
+                    //將ListAdapter設定至ListView裡面
                     videoView.setVisibility(View.INVISIBLE);
-                    videoView.setMediaController(mc);
+                    //videoView.setMediaController(mc);
                 }
             }
         });
@@ -89,8 +103,16 @@ public class Learn_word extends AppCompatActivity implements TextToSpeech.OnInit
                 }else{
                     w = w +1;
                     setvalue(w);
+                        mAdapter.clear();
+                    for(int i=0;i<part[w].length;i++) {
+                        mAdapter.insert(part[w][i],i);
+                    }
+                    mList.setAdapter(mAdapter);
+                    mAdapter.notifyDataSetChanged();
+                    //將ListAdapter設定至ListView裡面
                     videoView.setVisibility(View.INVISIBLE);
-                    videoView.setMediaController(mc);
+                    showGIF.setVisibility(View.VISIBLE);
+                    //videoView.setMediaController(mc);
                 }
             }
         });
@@ -103,9 +125,12 @@ public class Learn_word extends AppCompatActivity implements TextToSpeech.OnInit
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Learn_word.this,Home_page .class);
+                Intent intent = new Intent(Learn_word.this,Learn_or_test .class);
+                Bundle bundle1 = new Bundle();
+                bundle1.putString("Situation", Situation);
+                bundle1.putString("Word_or_Voc", Word_or_Voc);
+                intent.putExtras(bundle1);
                 startActivity(intent);
-
             }
         });
         mList.setAdapter(mAdapter);
@@ -113,14 +138,14 @@ public class Learn_word extends AppCompatActivity implements TextToSpeech.OnInit
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Toast.makeText(getApplicationContext(), "你選擇" + part[position], Toast.LENGTH_SHORT).show();
-               // videoView.notify();
-                picture(R.raw.not_thing_video);
+              //  Toast.makeText(getApplicationContext(), "你選擇" + part[position], Toast.LENGTH_SHORT).show();
+                //picture(R.raw.not_thing_video);
+                showGIF.setVisibility(View.INVISIBLE);
+                videoView.setVisibility(View.VISIBLE);
+                //videoView.notify();
                 spel.setText("");
-
-
                 videoView.setMediaController(mc);
-                videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + video[position]));
+                videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + video[w][position]));
                 videoView.requestFocus();
                 videoView.start();
             }
@@ -130,67 +155,58 @@ public class Learn_word extends AppCompatActivity implements TextToSpeech.OnInit
     public void setvalue(int i) {
         tts.speak(word[i], TextToSpeech.QUEUE_FLUSH, null);     //發音
         spel.setText(spell[i]);
-       // mean.setText(mean[i]);
        picture(i);
-
     }
     public void findView() {
         showGIF = (android.widget.ImageView) findViewById(R.id.imageView);
-
         spel = (TextView) findViewById(R.id.spell);
         last = (ImageView) findViewById(R.id.last);
         next = (ImageView) findViewById(R.id.next);
         back = (ImageView) findViewById(R.id.back);
         sound = (ImageView) findViewById(R.id.sound);
         videoView = (VideoView) findViewById(R.id.videoView);
-        Bundle bundle = this.getIntent().getExtras();
-        Situation = bundle.getString("Situation");
-        Word_or_Voc = bundle.getString("Word_or_Voc");
-        Learn_or_Test = bundle.getString("Learn_or_Test");
-
+        if(getIntent().getExtras()!=null){
+            Bundle bundle = this.getIntent().getExtras();
+            Situation = bundle.getString("Situation");
+            Word_or_Voc = bundle.getString("Word_or_Voc");
+            Learn_or_Test = bundle.getString("Learn_or_Test");
+        }
     }
     class Struct {
         public String iName;
-
         Struct(String name) {
             iName = name;
         }
-
     }
 
     private Learn_word.Struct[] buildData(int length) {
         Learn_word.Struct[] array = new Learn_word.Struct[length];
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i<length; i++) {
             array[i] = new Struct(part[i].toString() );
         }
         return array;
     }
 
-    public void picture(int i) {
-
+    public void picture(int i){
         showGIF.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v)
-            {
+            {(
                 // 點擊一下, 再開始播放一次
                 // 以下寫法, 等同 gif2.setVisible(true, true);
-                (showGIF.getDrawable()).setVisible(true, true);
-
+                showGIF.getDrawable()).setVisible(true, true);
             }
         });
 
-        try
-        {   // 取得 Gif 動畫檔
+        try{ // 取得 Gif 動畫檔
             gif = new GifAnimationDrawable( getResources().openRawResource(imgIds[i]) );
-
             // Gif Drawable 設定給 ImageView
             showGIF.setImageDrawable(gif);
-
             // 只播放一次
             gif.setOneShot(true);
-        }
-        catch( IOException ioe ){}
+        }catch( IOException ioe ){
 
+        }
     }
 
     @Override
@@ -209,9 +225,6 @@ public class Learn_word extends AppCompatActivity implements TextToSpeech.OnInit
             Log.e("TTS", "Initilization Failed!");
         }
     }
-
-
-
     @Override
     public void onDestroy() {
         // shutdown tts

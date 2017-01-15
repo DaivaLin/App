@@ -3,6 +3,7 @@ package com.example.sinni.app;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -16,11 +17,12 @@ import static com.example.sinni.app.Multiple_choice.RandomArray;
 public class TextMultiple extends AppCompatActivity implements View.OnClickListener {
     Button[] button = new Button[4];
     TextView Question,a2a,time;
-    int rand, count=0, correct=0, wrong=0;
+    int rand, count=0, correct=0, wrong=0,cou=30;
     String [] vocmean=new String[]{null};
     String [] vocabulary=new String[]{null};
     String [] buttonAnswer=new String[]{null};
     String Situation=null, answer=null;
+    Handler handler=new Handler();
     Random run=new Random();
     //private TextToSpeech tts;
     @Override
@@ -37,11 +39,12 @@ public class TextMultiple extends AppCompatActivity implements View.OnClickListe
         for (int i = 0; i < 4; i++) {
             button[i].setOnClickListener(this);
         }
+        handler.post(runnable);
     }
     void findView(){
         Question = (TextView) findViewById(R.id.Question);
         a2a = (TextView) findViewById(R.id.a2a);
-        //time = (TextView) findViewById(R.id.time);
+        time = (TextView) findViewById(R.id.time);
         button[0] = (Button)findViewById(R.id.button3);
         button[1] = (Button)findViewById(R.id.button4);
         button[2] = (Button)findViewById(R.id.button5);
@@ -102,20 +105,17 @@ public class TextMultiple extends AppCompatActivity implements View.OnClickListe
             resultAction(); //以達到10題，結算
         }
     }
-   /* void countDownTimer(){
-        new CountDownTimer(30000,1000){
-            //            CounDownTimer(總共倒數多少秒 , 每次扣多少)
-            //            每1000為一秒, 所以30000 = 30 秒 , 1000 = 1秒
-            @Override
-            public void onFinish() {
+    private Runnable runnable = new Runnable() {
+        public void run() {
+            if (cou > 0) {
+                time.setText(Integer.toString(cou - 1));
+                cou--;
+                handler.postDelayed(runnable, 1000);
+            }else{
                 resultAction();
             }
-            @Override
-            public void onTick(long millisUntilFinished) {
-                time.setText("" + millisUntilFinished/1000);
-            }
-        }.start();
-    }*/
+        }
+    };
    /* public void onInit(int status) {
         // TODO Auto-generated method stub
         if (status == TextToSpeech.SUCCESS) {
@@ -141,7 +141,7 @@ public class TextMultiple extends AppCompatActivity implements View.OnClickListe
     }*/
     void resultAction(){
         Intent intent=new Intent();
-        intent.setClass(TextMultiple.this,Multiple_choice_score.class);
+        intent.setClass(TextMultiple.this,Learn_or_test.class);
         Bundle bundle2=new Bundle();
         bundle2.putInt("count",count);
         bundle2.putInt("correct",correct);

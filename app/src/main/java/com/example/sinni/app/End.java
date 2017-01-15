@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class End extends AppCompatActivity {
     TextView count,correct,wrong;
     int count1,correct1,wrong1;
+    String Situation,Word_or_Voc;
     Button re;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,8 @@ public class End extends AppCompatActivity {
         re=(Button)findViewById(R.id.re);
         if(getIntent().getExtras()!=null){
             Bundle bundle3=getIntent().getExtras();
+            Situation = bundle3.getString("Situation");
+            Word_or_Voc = bundle3.getString("Word_or_Voc");
             count1=bundle3.getInt("count");
             correct1 =bundle3.getInt("correct");
             wrong1=bundle3.getInt("wrong");
@@ -32,7 +35,11 @@ public class End extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent();
-                intent.setClass(End.this,StructureCognition.class);
+                intent.setClass(End.this,Learn_or_test.class);
+                Bundle bundle4=new Bundle();
+                bundle4.putString("Situation",Situation);
+                bundle4.putString("Word_or_Voc",Word_or_Voc);
+                intent.putExtras(bundle4);
                 startActivity(intent);
                 finish();
             }

@@ -6,30 +6,35 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.getbase.floatingactionbutton.FloatingActionButton;
-
 
 public class Home_page extends AppCompatActivity {
     ImageView a,b;
     Bundle bundle;
     Intent intent;
+    String Situation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         setTitle("Home Page");
-        findView();
+        a = (ImageView) findViewById(R.id.a);
+        b = (ImageView) findViewById(R.id.b);
        // floatingButton();
        // bundle = new Bundle();
         intent = new Intent();
-
+        if(this.getIntent().getExtras()!=null) {
+            Bundle bundle = this.getIntent().getExtras();
+            Situation = bundle.getString("Situation");
+        }
         a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(Home_page.this,StructureCognition.class);
-                //bundle.putString("Situation", "food");
-              //  intent.putExtras(bundle);
+                intent = new Intent(Home_page.this,StructureTeaching.class);
+                if(Situation!=null) {
+                    bundle.putString("Situation", Situation);
+                    intent.putExtras(bundle);
+                }
                 startActivity(intent);
             }
         });
@@ -37,24 +42,21 @@ public class Home_page extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 intent = new Intent(Home_page.this, SituationSelect.class);
-                //bundle.putString("Situation", "shopping");
-              //  intent.putExtras(bundle);
+                if(Situation!=null) {
+                    bundle.putString("Situation", Situation);
+                    intent.putExtras(bundle);
+                }
                 startActivity(intent);
             }
         });
 
     }
-    public void findView() {
-        a = (ImageView) findViewById(R.id.a);
-        b = (ImageView) findViewById(R.id.b);
-
-    }
     //浮動button-function
-    public void floatingButton(){
-        com.getbase.floatingactionbutton.FloatingActionButton my_favorite = new FloatingActionButton(getBaseContext());
-        FloatingActionButton Structure = new FloatingActionButton(getBaseContext());
+    // public void floatingButton(){
+       // com.getbase.floatingactionbutton.FloatingActionButton my_favorite = new FloatingActionButton(getBaseContext());
+       // FloatingActionButton Structure = new FloatingActionButton(getBaseContext());
 
-        //浮動button-我的收藏
+//浮動button-我的收藏
 //        my_favorite.setTitle("選擇題");
 //        my_favorite.setColorNormalResId(R.color.other_button_color);
 //        my_favorite.setColorDisabled(R.color.white_pressed);
@@ -69,7 +71,6 @@ public class Home_page extends AppCompatActivity {
 //
 //            }
 //        });
-
 //        //浮動button-附近景點
 //        Structure.setTitle("結構");
 //        Structure.setColorNormalResId(R.color.other_button_color);
@@ -82,12 +83,11 @@ public class Home_page extends AppCompatActivity {
 //                //Toast.makeText(getApplicationContext(),"結構",Toast.LENGTH_SHORT).show();
 //                Intent intent = new Intent(Home_page.this, Structure_home_page.class);
 //                startActivity(intent);
-//
 //            }
 //        });
 //        final FloatingActionsMenu menuMultipleActions = (FloatingActionsMenu) findViewById(R.id.multiple_actions);
 //       // menuMultipleActions.addButton(my_favorite);
 //        menuMultipleActions.addButton(Structure);
-    }
+ //   }
 
 }

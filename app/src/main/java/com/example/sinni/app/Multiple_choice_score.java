@@ -25,12 +25,13 @@ public class Multiple_choice_score extends AppCompatActivity {
         correct=(TextView)findViewById(R.id.correct);
         wrong=(TextView)findViewById(R.id.wrong);
         go_back=(Button)findViewById(R.id.go_back);
-        Bundle bundle = this.getIntent().getExtras();
+        if(this.getIntent().getExtras()!=null) {
+            Bundle bundle = this.getIntent().getExtras();
             Situation = bundle.getString("Situation");
-            count1=bundle.getInt("count");
-            correct1 =bundle.getInt("correct");
-            wrong1=bundle.getInt("wrong");
-
+            count1 = bundle.getInt("count");
+            correct1 = bundle.getInt("correct");
+            wrong1 = bundle.getInt("wrong");
+        }
 //        count.setText(getText(count1).toString());
 //        correct.setText(getText(correct1).toString());
 //        wrong.setText(getText(wrong1).toString());
