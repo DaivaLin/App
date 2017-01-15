@@ -46,6 +46,7 @@ public class Structures_level2 extends AppCompatActivity {
                  it=new Intent();
                  it.setClass(Structures_level2.this,LeftThreePacks.class);
                 startActivity(it);
+                finish();
             }
         });
 
@@ -56,6 +57,7 @@ public class Structures_level2 extends AppCompatActivity {
                  it=new Intent();
                 it.setClass(Structures_level2.this,UnderTheThreePacks.class);
                 startActivity(it);
+                finish();
             }
         });
 
@@ -63,9 +65,10 @@ public class Structures_level2 extends AppCompatActivity {
         onTheThreeBags.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                 it=new Intent();
-                  it.setClass(Structures_level2.this,OnTheThreeBags.class);
+                it=new Intent();
+                it.setClass(Structures_level2.this,OnTheThreeBags.class);
                 startActivity(it);
+                finish();
             }
         });
 
@@ -76,6 +79,7 @@ public class Structures_level2 extends AppCompatActivity {
                  it=new Intent();
                  it.setClass(Structures_level2.this,LeftLowerPack.class);
                 startActivity(it);
+                finish();
             }
         });
 
@@ -86,6 +90,7 @@ public class Structures_level2 extends AppCompatActivity {
                  it=new Intent();
                   it.setClass(Structures_level2.this,TopLeftPackage.class);
                 startActivity(it);
+                finish();
             }
         });
 
@@ -96,6 +101,7 @@ public class Structures_level2 extends AppCompatActivity {
                  it=new Intent();
                  it.setClass(Structures_level2.this,RightUpperPackage.class);
                 startActivity(it);
+                finish();
             }
         });
 
@@ -106,18 +112,22 @@ public class Structures_level2 extends AppCompatActivity {
                  it=new Intent();
                    it.setClass(Structures_level2.this,AllSurrounded.class);
                 startActivity(it);
+                finish();
             }
         });
     }
 
     //浮動button-function
     public void floatingButton(){
+        String level1 = getString(R.string.level1);
+        String level3 = getString(R.string.level3);
+
         FloatingActionButton first = new FloatingActionButton(getBaseContext());
         FloatingActionButton third = new FloatingActionButton(getBaseContext());
     //    FloatingActionButton fourth = new FloatingActionButton(getBaseContext());
 
         //浮動button-第一級
-        first.setTitle("第一級");
+        first.setTitle(level1);
         first.setColorNormalResId(R.color.other_button_color);
         first.setColorDisabled(R.color.white_pressed);
         first.setColorPressedResId(R.color.black_20);
@@ -133,7 +143,7 @@ public class Structures_level2 extends AppCompatActivity {
 
 
         //浮動button-第三級
-        third.setTitle("第三級");
+        third.setTitle(level3);
         third.setColorNormalResId(R.color.other_button_color);
         third.setColorDisabled(R.color.white_pressed);
         third.setColorPressedResId(R.color.black_20);

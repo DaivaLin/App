@@ -125,7 +125,7 @@ public class Learn_word extends AppCompatActivity implements TextToSpeech.OnInit
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Learn_word.this,Learn_or_test .class);
+                Intent intent = new Intent(Learn_word.this,word_and_voc .class);
                 Bundle bundle1 = new Bundle();
                 bundle1.putString("Situation", Situation);
                 bundle1.putString("Word_or_Voc", Word_or_Voc);

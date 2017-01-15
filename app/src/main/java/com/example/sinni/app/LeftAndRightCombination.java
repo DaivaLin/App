@@ -18,8 +18,10 @@ import java.io.IOException;
 
 public class LeftAndRightCombination extends AppCompatActivity {
     //左右字判斷
-    int[] animationword =new int[]{R.raw.animationword111,R.raw.animationword114,R.raw.animationword117};
-    int[][] animationword1 = new int[][]{{R.drawable.first111,R.drawable.first112,	R.drawable.first113},{R.drawable.first114,R.drawable.first115,R.drawable.first116},{R.drawable.first117,R.drawable.first118,R.drawable.first119}};
+  //  int[] animationword =new int[]{R.raw.animationword111,R.raw.animationword114,R.raw.animationword117};
+    int[] animationword =new int[]{0};
+   // int[][] animationword1 = new int[][]{{R.drawable.first111,R.drawable.first112,	R.drawable.first113},{R.drawable.first114,R.drawable.first115,R.drawable.first116},{R.drawable.first117,R.drawable.first118,R.drawable.first119}};
+    int[][] animationword1 = new int[][]{null};
     int[][] animationword2= new int[][]{null};
     ImageView traditional,ac;
     ImageView[] img = new ImageView[2];

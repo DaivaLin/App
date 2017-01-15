@@ -18,8 +18,6 @@
         <activity android:name=".Multiple_choice" />
         <activity android:name=".Multiple_choice_score" />
         <activity android:name=".Learn_voc" />
-        <activity android:name=".Word_or_voc" />
-        <activity android:name=".Learn_or_test" />
         <activity android:name=".Learn_word" />
         <activity android:name=".TextMultiple" />
         <activity android:name=".SituationSelect" />
@@ -29,7 +27,8 @@
         <activity android:name=".UpperAndLowerCombinations" />
         <activity android:name=".Structures_level2" />
         <activity android:name=".Structures_level3" />
-        <activity android:name=".choose_wordvoc"></activity>
+        <activity android:name=".choose_wordvoc" />
+        <activity android:name=".word_and_voc" />
     </application>
 
 </manifest>

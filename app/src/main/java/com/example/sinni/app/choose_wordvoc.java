@@ -7,11 +7,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 public class choose_wordvoc extends AppCompatActivity {
 
-    private android.support.design.widget.TabLayout mTabs;
+    private TabLayout  mTabs;
     private ViewPager mViewPager;
 
     @Override
@@ -20,10 +19,10 @@ public class choose_wordvoc extends AppCompatActivity {
         setContentView(R.layout.activity_choose_wordvoc);
 
 
-        mTabs = (android.support.design.widget.TabLayout) findViewById(R.id.pager_tabs);
-        mTabs.addTab(mTabs.newTab().setText("Game"));
-        mTabs.addTab(mTabs.newTab().setText("Music"));
-        mTabs.addTab(mTabs.newTab().setText("Contact"));
+        mTabs = (TabLayout) findViewById(R.id.pager_tabs);
+        mTabs.addTab(mTabs.newTab().setText("Word"));
+        mTabs.addTab(mTabs.newTab().setText("Voc"));
+    //    mTabs.addTab(mTabs.newTab().setText("Contact"));
 
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mViewPager.setAdapter(new MyPagerAdapter());
@@ -31,7 +30,7 @@ public class choose_wordvoc extends AppCompatActivity {
     }
 
     class MyPagerAdapter extends PagerAdapter {
-        private int pageCount = 3;
+        private int pageCount = 2;
         @Override
         public int getCount() {
             return pageCount;
@@ -49,10 +48,10 @@ public class choose_wordvoc extends AppCompatActivity {
 
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
-            View view = getLayoutInflater().inflate(R.layout.my_pager_items, container, false);
+            View view = getLayoutInflater().inflate(R.layout.activity_learn_voc, container, false);
             container.addView(view);
-            TextView title = (TextView) view.findViewById(R.id.textView_item_title);
-            title.setText("" + (position + 1));
+            ///TextView title = (TextView) view.findViewById(R.id.textView_item_title);
+           // title.setText("" + (position + 1));
             return view;
         }
 

@@ -62,12 +62,16 @@ public class StructureTeaching extends AppCompatActivity {
 
     //浮動button-function
     public void floatingButton(){
+
+        String level2 = getString(R.string.level2);
+        String level3 = getString(R.string.level3);
+
         FloatingActionButton second = new FloatingActionButton(getBaseContext());
         FloatingActionButton third = new FloatingActionButton(getBaseContext());
         //    FloatingActionButton fourth = new FloatingActionButton(getBaseContext());
 
         //浮動button-第二級
-        second.setTitle("第二級");
+        second.setTitle(level2);
         second.setColorNormalResId(R.color.other_button_color);
         second.setColorDisabled(R.color.white_pressed);
         second.setColorPressedResId(R.color.black_20);
@@ -82,7 +86,7 @@ public class StructureTeaching extends AppCompatActivity {
         });
 
         //浮動button-第三級
-        third.setTitle("第三級");
+        third.setTitle(level3);
         third.setColorNormalResId(R.color.other_button_color);
         third.setColorDisabled(R.color.white_pressed);
         third.setColorPressedResId(R.color.black_20);

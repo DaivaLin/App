@@ -13,7 +13,7 @@
     tools:context="com.example.sinni.app.StructureTeaching">
 
     <TextView
-        android:text="第一級"
+        android:text="@string/level1"
         android:layout_width="match_parent"
         android:id="@+id/textView3"
         android:textSize="36sp"

@@ -10,8 +10,7 @@ import com.getbase.floatingactionbutton.FloatingActionButton;
 
 public class SituationSelect extends AppCompatActivity {
     ImageView food,shopping,car;
-    Bundle bundle;
-    Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,23 +19,27 @@ public class SituationSelect extends AppCompatActivity {
         findView();
         //浮動button
         //floatingButton();
-        bundle = new Bundle();
-        intent = new Intent();
+
 
         food.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(SituationSelect.this,choose_wordvoc.class);
+
+                Intent intent = new Intent();
+                intent.setClass(SituationSelect.this,Learn_voc.class);
+                Bundle bundle = new Bundle();
                 bundle.putString("Situation", "food");
                 intent.putExtras(bundle);
                 startActivity(intent);
-                finish();
+
             }
         });
         shopping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(SituationSelect.this, Word_or_voc.class);
+                Intent intent = new Intent();
+                intent.setClass(SituationSelect.this,Learn_voc.class);
+                Bundle bundle = new Bundle();
                 bundle.putString("Situation", "shopping");
                 intent.putExtras(bundle);
                 startActivity(intent);
@@ -46,7 +49,9 @@ public class SituationSelect extends AppCompatActivity {
         car.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(SituationSelect.this, Word_or_voc.class);
+                Intent intent = new Intent();
+                intent.setClass(SituationSelect.this,Learn_voc.class);
+                Bundle bundle = new Bundle();
                 bundle.putString("Situation", "car");
                 intent.putExtras(bundle);
                 startActivity(intent);

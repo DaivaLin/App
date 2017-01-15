@@ -13,7 +13,7 @@
     tools:context="com.example.sinni.app.Structures_level2">
 
     <TextView
-        android:text="第二級"
+        android:text="@string/level2"
         android:layout_width="match_parent"
         android:id="@+id/textView4"
         android:textSize="36sp"
@@ -44,7 +44,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:srcCompat="@drawable/onthethreebags"
-        android:id="@+id/onthethreebags"
+        android:id="@+id/underthethreepacks"
         android:layout_weight="1"
         android:layout_alignTop="@+id/allsurrounded"
         android:layout_alignParentLeft="true"
@@ -83,7 +83,7 @@
     <ImageView
         android:layout_width="80dp"
         app:srcCompat="@drawable/underthethreepacks"
-        android:id="@+id/underthethreepacks"
+        android:id="@+id/onthethreebags"
         android:layout_weight="1"
         android:layout_height="80dp"
         android:layout_below="@+id/rightupperpackage"

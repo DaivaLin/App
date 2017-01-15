@@ -14,7 +14,7 @@
 
 
     <TextView
-        android:text="第三級"
+        android:text="@string/level3"
         android:layout_width="match_parent"
         android:id="@+id/textView5"
         android:textSize="36sp"

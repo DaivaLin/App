@@ -11,8 +11,7 @@
     <string name="health">健康</string>
     <string name="travel">旅行</string>
     <string name="numberOfQuestions">題數</string>
-    <string name="right">答對</string>
-    <string name="wrong">答錯</string>
+
     <string name="go_back">上一頁</string>
 
     <string name="expalnt1">漢字的字形結構可分為多少類型？</string>
@@ -65,6 +64,13 @@
 
     <string name="structure_learning">結構教學</string>
     <string name="situational_learning">情境教學</string>
+    <string name="right">正確1</string>
+    <string name="wrong">錯誤1</string>
+    <string name="word">文字1</string>
+    <string name="voc">詞彙1</string>
+    <string name="level1">第一級1</string>
+    <string name="level2">第二級2</string>
+    <string name="level3">第三級3</string>
 
 
 </resources>

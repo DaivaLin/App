@@ -144,8 +144,10 @@ public class UpperAndLowerCombinations extends AppCompatActivity {
             }
         }
         private void setStart() {
+            String right = getString(R.string.right);
+
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage("正確")
+            builder.setMessage(right)
                     .setCancelable(false)
                     .setPositiveButton("next", new DialogInterface.OnClickListener() {
                         @Override

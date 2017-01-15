@@ -1,14 +1,11 @@
 package com.example.sinni.app;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import static com.example.sinni.app.R.id.re;
 
 public class End extends AppCompatActivity {
     TextView count,correct,wrong;
@@ -38,7 +35,7 @@ public class End extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent();
-                intent.setClass(End.this,Learn_or_test.class);
+                intent.setClass(End.this,word_and_voc.class);
                 Bundle bundle4=new Bundle();
                 bundle4.putString("Situation",Situation);
                 bundle4.putString("Word_or_Voc",Word_or_Voc);

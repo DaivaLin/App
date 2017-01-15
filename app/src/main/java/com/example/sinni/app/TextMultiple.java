@@ -141,7 +141,7 @@ public class TextMultiple extends AppCompatActivity implements View.OnClickListe
     }*/
     void resultAction(){
         Intent intent=new Intent();
-        intent.setClass(TextMultiple.this,Learn_or_test.class);
+        intent.setClass(TextMultiple.this,word_and_voc.class);
         Bundle bundle2=new Bundle();
         bundle2.putInt("count",count);
         bundle2.putInt("correct",correct);

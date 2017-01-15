@@ -23,7 +23,8 @@ import static android.R.attr.duration;
 public class LeftRightStructure extends AppCompatActivity {
 
     int[] animationword =new int[]{};
-    int[][] animationword1 = new int[][]{{R.drawable.first111,R.drawable.first112,R.drawable.first113},{R.drawable.first114,R.drawable.first115,R.drawable.first116},{R.drawable.first117,R.drawable.first118,R.drawable.first119},{R.drawable.first1110,R.drawable.first1111,R.drawable.first1112},{R.drawable.first1113,R.drawable.first1114,R.drawable.first1115},{R.drawable.first1116,R.drawable.first1117,R.drawable.first1118},{R.drawable.first1119,R.drawable.first1120,R.drawable.first1121},{R.drawable.first1122,R.drawable.first1123,R.drawable.first1124},{R.drawable.first1125,R.drawable.first1126,R.drawable.first1127},{R.drawable.first1128,R.drawable.first1129,R.drawable.first1130}};
+    //int[][] animationword1 = new int[][]{{R.drawable.first111,R.drawable.first112,R.drawable.first113},{R.drawable.first114,R.drawable.first115,R.drawable.first116},{R.drawable.first117,R.drawable.first118,R.drawable.first119},{R.drawable.first1110,R.drawable.first1111,R.drawable.first1112},{R.drawable.first1113,R.drawable.first1114,R.drawable.first1115},{R.drawable.first1116,R.drawable.first1117,R.drawable.first1118},{R.drawable.first1119,R.drawable.first1120,R.drawable.first1121},{R.drawable.first1122,R.drawable.first1123,R.drawable.first1124},{R.drawable.first1125,R.drawable.first1126,R.drawable.first1127},{R.drawable.first1128,R.drawable.first1129,R.drawable.first1130}};
+    int[][] animationword1 = new int[][]{null};
     int[][] animationword2= new int[][]{{}};
     ImageView traditional;
     ImageView[] img = new ImageView[3];

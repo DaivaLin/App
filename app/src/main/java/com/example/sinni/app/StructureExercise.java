@@ -19,10 +19,8 @@ public class StructureExercise extends AppCompatActivity implements View.OnClick
 ImageView traditional;
     TextView timev;
     ImageView[] image;
-    int[][] animationword1 = new int[][]{{R.drawable.first101,R.drawable.first102,R.drawable.first103}, {R.drawable.first104, R.drawable.first105, R.drawable.first106}, {R.drawable.first107, R.drawable.first108, R.drawable.first109},{R.drawable.first1010, R.drawable.first1011, R.drawable.first1012},{R.drawable.first1013, R.drawable.first1014, R.drawable.first1015},{R.drawable.first1016, R.drawable.first1017, R.drawable.first1018},{R.drawable.first1019, R.drawable.first1020, R.drawable.first1021},{R.drawable.first1022, R.drawable.first1023, R.drawable.first1024},{R.drawable.first111,	R.drawable.first112,	R.drawable.first113},
-            { R.drawable.first114,R.drawable.first115	,R.drawable.first116}
-            ,{R.drawable.first117,	R.drawable.first118,	R.drawable.first119}
-    };
+    int[][] animationword1 = new int[][]{{R.drawable.first101,R.drawable.first102,R.drawable.first103}, {R.drawable.first104, R.drawable.first105, R.drawable.first106}, {R.drawable.first107, R.drawable.first108, R.drawable.first109},{R.drawable.first1010, R.drawable.first1011, R.drawable.first1012},{R.drawable.first1013, R.drawable.first1014, R.drawable.first1015},{R.drawable.first1016, R.drawable.first1017, R.drawable.first1018},{R.drawable.first1019, R.drawable.first1020, R.drawable.first1021},{R.drawable.first1022, R.drawable.first1023, R.drawable.first1024}};
+
     int[][] animationword2 = new int[][]{{R.drawable.part31, R.drawable.part32}
                                         , {R.drawable.part40, R.drawable.part94}
                                         , {R.drawable.part30, R.drawable.part18}
@@ -31,9 +29,6 @@ ImageView traditional;
                                         , {R.drawable.part19, R.drawable.part15}
                                         , {R.drawable.part70, R.drawable.part64}
                                         , {R.drawable.part91, R.drawable.part72}
-                                        , {R.drawable.part5, R.drawable.part10}
-                                        , {R.drawable.part39, R.drawable.part29}
-                                        , {R.drawable.part12, R.drawable.part9}
                                         };
     int[] animationword3;
     int[] animationword4 = new int[]{R.drawable.part0,R.drawable.part1,R.drawable.part2,R.drawable.part3,R.drawable.part4,R.drawable.part5,R.drawable.part6,R.drawable.part7,R.drawable.part8,R.drawable.part9,R.drawable.part10,R.drawable.part11,R.drawable.part12,R.drawable.part13,R.drawable.part14,R.drawable.part15,R.drawable.part16,R.drawable.part17,R.drawable.part18,R.drawable.part19,R.drawable.part20,R.drawable.part21,R.drawable.part22,R.drawable.part23,R.drawable.part24,R.drawable.part25,R.drawable.part26,R.drawable.part27,R.drawable.part28,R.drawable.part29,R.drawable.part30,R.drawable.part31,R.drawable.part32,R.drawable.part33,R.drawable.part34,R.drawable.part35,R.drawable.part36,R.drawable.part37,R.drawable.part38,R.drawable.part39,R.drawable.part40,R.drawable.part41,R.drawable.part42,R.drawable.part43,R.drawable.part44,R.drawable.part45,R.drawable.part47,R.drawable.part48,R.drawable.part49,R.drawable.part50,R.drawable.part51,R.drawable.part52,R.drawable.part53,R.drawable.part54,R.drawable.part55,R.drawable.part56,R.drawable.part57,R.drawable.part58,R.drawable.part59,R.drawable.part60,R.drawable.part61,R.drawable.part62,R.drawable.part63,R.drawable.part64,R.drawable.part65,R.drawable.part67,R.drawable.part68,R.drawable.part69,R.drawable.part70,R.drawable.part71,R.drawable.part72,R.drawable.part73,R.drawable.part74,R.drawable.part75,R.drawable.part76,R.drawable.part77,R.drawable.part78,R.drawable.part79,R.drawable.part80,R.drawable.part81,R.drawable.part82,R.drawable.part83,R.drawable.part84,R.drawable.part85,R.drawable.part86,R.drawable.part87,R.drawable.part88,R.drawable.part89,R.drawable.part90,R.drawable.part91,R.drawable.part92,R.drawable.part93,R.drawable.part94,R.drawable.part95,R.drawable.part96,R.drawable.part97,R.drawable.part98};

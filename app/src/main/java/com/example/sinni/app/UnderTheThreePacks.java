@@ -125,6 +125,8 @@ public class UnderTheThreePacks extends AppCompatActivity {
     };
     //下三包字判斷
     public void Utt(View v){
+        String right = getString(R.string.right);
+        String wrong = getString(R.string.wrong);
         backgroundImageName = String.valueOf(v.getTag());
         if(a==0){
             if(mx >= 150 && mx <= 350 && my >= 20 && my <= 210){
@@ -133,12 +135,12 @@ public class UnderTheThreePacks extends AppCompatActivity {
                     a++;
                     // traditional.setImageResource(animationword1[count1][1]);
                     traditional.setImageDrawable(ContextCompat.getDrawable(this,animationword1[count1][1]));
-                    showToastMessage("正確",tine);
+                    showToastMessage(right,tine);
                 }else{
-                    showToastMessage("錯誤",tine);
+                    showToastMessage(wrong,tine);
                 }
             }else{
-                showToastMessage("錯誤",tine);
+                showToastMessage(wrong,tine);
             }
         }else{
             if(!(mx>=150 && mx<=350 && my>=20&& my<=210)){
@@ -146,14 +148,14 @@ public class UnderTheThreePacks extends AppCompatActivity {
                     v.setVisibility(View.INVISIBLE);
                     //traditional.setImageResource(animationword1[count1][2]);
                     traditional.setImageDrawable(ContextCompat.getDrawable(this, animationword1[count1][2]));
-                    showToastMessage("正確",tine);
+                    showToastMessage(right,tine);
                     a++;
                     //SetStart();
                 }else{
-                    showToastMessage("錯誤",tine);
+                    showToastMessage(wrong,tine);
                 }
             }else{
-                showToastMessage("錯誤",tine);
+                showToastMessage(wrong,tine);
             }
         }
     }
